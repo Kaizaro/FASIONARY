@@ -5,7 +5,7 @@ export default class Library extends Component {
     render() {
         return (
             <View>
-                <Text>Courses</Text>
+                <Text>Library</Text>
             </View>
         );
     }

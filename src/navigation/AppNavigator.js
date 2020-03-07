@@ -29,7 +29,6 @@ const AuthStackSwitcher = props => (
 
 const MainStackSwitcher = props => (
     <Tab.Navigator initialRouteName={'Courses'}>
-        {console.log(props)}
         <Tab.Screen name={'Courses'} component={Courses} />
         <Tab.Screen name={'Dictionary'} component={Dictionary} />
         <Tab.Screen name={'Library'} component={Library} />
