@@ -16,7 +16,9 @@ import Profile from '../screens/main/profile/Profile';
 import DictionaryIcon from '../../assets/DictionaryTabIcon.png';
 import CoursesIcon from '../../assets/CoursesTabIcon.png';
 import LibraryIcon from '../../assets/LibraryTabIcon.png';
-import {Image, View} from 'react-native';
+import {Dimensions, Image, View} from 'react-native';
+
+export let {width, height} = Dimensions.get('window');
 
 const AppStack = createStackNavigator();
 const AuthStack = createStackNavigator();
