@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {width, height} from '../../../navigation/AppNavigator';
+import Button from '../../../components/Button';
 
 export default class Dictionary extends Component {
     render() {
@@ -13,6 +14,7 @@ export default class Dictionary extends Component {
                     termins by photo and images, and provides translations on
                     other languages
                 </Text>
+                <Button text={'Favorites'} />
             </View>
         );
     }

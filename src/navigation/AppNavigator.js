@@ -13,9 +13,9 @@ import Dictionary from '../screens/main/dictionary/Dictionary';
 import Library from '../screens/main/library/Library';
 import Modboards from '../screens/main/modboards/Modboards';
 import Profile from '../screens/main/profile/Profile';
-import DictionaryIcon from '../../assets/DictionaryTabIcon.png';
-import CoursesIcon from '../../assets/CoursesTabIcon.png';
-import LibraryIcon from '../../assets/LibraryTabIcon.png';
+import DictionaryIcon from '../../assets/icons/tabBarIcons/DictionaryTabIcon.png';
+import CoursesIcon from '../../assets/icons/tabBarIcons/CoursesTabIcon.png';
+import LibraryIcon from '../../assets/icons/tabBarIcons/LibraryTabIcon.png';
 import {Dimensions, Image, View} from 'react-native';
 
 export let {width, height} = Dimensions.get('window');
