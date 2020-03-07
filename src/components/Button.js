@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {StyleSheet, Text, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/Entypo';
 import {BADGE_COLORS} from '../styleguide/Colors';
+import {SOFIA_BOLD, SOFIA_PRO_EXTRA_LIGHT} from '../styleguide/Fonts';
 
 export default class Button extends Component {
     render() {
@@ -36,6 +37,8 @@ const styles = StyleSheet.create({
         backgroundColor: BADGE_COLORS.SPACE_BLUE,
     },
     text: {
+        marginLeft: 5,
+        // fontFamily: SOFIA_PRO_EXTRA_LIGHT,
         fontSize: 20,
         color: 'white',
     },
