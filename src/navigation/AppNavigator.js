@@ -1,4 +1,6 @@
 import React from 'react';
+import {Image} from 'react-native';
+
 import {DefaultTheme, NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
@@ -11,21 +13,19 @@ import {
 import Courses from '../screens/main/courses/Courses';
 import Dictionary from '../screens/main/dictionary/Dictionary';
 import Library from '../screens/main/library/Library';
-import Modboards from '../screens/main/modboards/Modboards';
 import Profile from '../screens/main/profile/Profile';
 import DictionaryIcon from '../../assets/icons/tabBarIcons/DictionaryTabIcon.png';
 import CoursesIcon from '../../assets/icons/tabBarIcons/CoursesTabIcon.png';
 import LibraryIcon from '../../assets/icons/tabBarIcons/LibraryTabIcon.png';
-import {Dimensions, Image, View} from 'react-native';
-
-export let {width, height} = Dimensions.get('window');
+import Init from '../Init';
 
 const AppStack = createStackNavigator();
 const AuthStack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
 const AppStackSwitcher = () => (
-    <AppStack.Navigator initialRouteName={'MainStack'}>
+    <AppStack.Navigator initialRouteName={'Init'}>
+        <AppStack.Screen name={'Init'} component={Init} />
         <AppStack.Screen name={'AuthStack'} component={AuthStackSwitcher} />
         <AppStack.Screen name={'MainStack'} component={MainStackSwitcher} />
     </AppStack.Navigator>
