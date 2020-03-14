@@ -20,6 +20,7 @@
     "babel-plugin-transform-remove-console": "^6.9.4",
     "eslint-import-resolver-babel-module": "^5.1.2",
     "eslint-plugin-import": "^2.20.1",
+    "lodash": "^4.17.15",
     "react": "16.9.0",
     "react-native": "0.61.5",
     "react-native-gesture-handler": "^1.6.0",
