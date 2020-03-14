@@ -1,6 +1,5 @@
 import React, {PureComponent} from 'react';
 import {ActivityIndicator, Dimensions, StyleSheet, View} from 'react-native';
-import {scaleHorizontal, scaleVertical} from './lib/util';
 
 export let {width, height} = Dimensions.get('window');
 
@@ -33,9 +32,5 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
-    },
-    loader: {
-        width: scaleHorizontal(200),
-        height: scaleHorizontal(200),
     },
 });

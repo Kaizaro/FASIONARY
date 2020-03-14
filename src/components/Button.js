@@ -3,6 +3,7 @@ import {StyleSheet, Text, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/Entypo';
 import {BADGE_COLORS} from '../styleguide/Colors';
 import {SOFIA_BOLD, SOFIA_PRO_EXTRA_LIGHT} from '../styleguide/Fonts';
+import {scaleHorizontal, scaleVertical} from '../lib/util';
 
 export default class Button extends Component {
     render() {
@@ -29,17 +30,17 @@ export default class Button extends Component {
 const styles = StyleSheet.create({
     container: {
         width: '100%',
-        height: 60,
+        height: scaleVertical(60),
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
-        borderRadius: 10,
+        borderRadius: scaleVertical(10),
         backgroundColor: BADGE_COLORS.SPACE_BLUE,
     },
     text: {
-        marginLeft: 5,
+        marginLeft: scaleHorizontal(5),
         // fontFamily: SOFIA_PRO_EXTRA_LIGHT,
-        fontSize: 20,
+        fontSize: scaleHorizontal(20),
         color: 'white',
     },
 });
