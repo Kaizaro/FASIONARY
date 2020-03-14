@@ -22,7 +22,7 @@ export default class Init extends PureComponent {
         console.log(this.props);
         return (
             <View style={styles.container}>
-                <ActivityIndicator style={styles.loader} color={'blue'} />
+                <ActivityIndicator size={'large'} color={'blue'} />
             </View>
         );
     }

@@ -25,7 +25,7 @@ const Tab = createBottomTabNavigator();
 
 const AppStackSwitcher = () => (
     <AppStack.Navigator initialRouteName={'Init'}>
-        <AppStack.Screen name={'Init'} component={Init} />
+        <AppStack.Screen name={'Init'} component={Init} options={{header: () => null}} />
         <AppStack.Screen name={'AuthStack'} component={AuthStackSwitcher} />
         <AppStack.Screen name={'MainStack'} component={MainStackSwitcher} />
     </AppStack.Navigator>
