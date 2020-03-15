@@ -1,15 +1,16 @@
 import React, {Component} from 'react';
 import {FlatList, SafeAreaView, StyleSheet, Text, View} from 'react-native';
 import {width, height} from '../../../navigation/AppNavigator';
-import Button from '../../../components/Button';
+import Button from '../../../components/common/Button';
 import {scaleHorizontal, scaleVertical} from '../../../lib/util';
 import {APP_FONTS} from '../../../styleguide/Fonts';
 import {APP_COLORS} from '../../../styleguide/Colors';
 import _ from 'lodash';
 
 import image from '../../../../assets/images/sample.jpeg';
-import DictionarySmallCard from '../../../components/DictionarySmallCard';
-import Title from '../../../components/Title';
+import DictionarySmallCard from '../../../components/dictionary/DictionarySmallCard';
+import Title from '../../../components/common/Title';
+import Description from '../../../components/common/Description';
 
 export default class Dictionary extends Component {
     state = {
@@ -71,17 +72,16 @@ export default class Dictionary extends Component {
         const {categories} = this.state;
         const chunkedCategories = _.chunk(categories, 2);
         console.log(chunkedCategories);
+        const description =
+            'Visual Dictionary helps you to define professional tools and termins by photo and images, and provides translations on other languages';
         return (
             <SafeAreaView style={{flex: 1}}>
                 <View style={styles.container}>
                     <Title title={'Dictionary'} />
-                    <View style={styles.divideContainer}>
-                        <Text style={styles.text}>
-                            Visual Dictionary helps you to define professional
-                            tools and termins by photo and images, and provides
-                            translations on other languages
-                        </Text>
-                    </View>
+                    <Description
+                        text={description}
+                        viewStyle={styles.divideContainer}
+                    />
                     <Button text={'Favorites'} style={styles.divideContainer} />
                     <View style={styles.flatlistContainer}>
                         <FlatList

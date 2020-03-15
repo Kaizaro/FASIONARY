@@ -1,8 +1,8 @@
 import React, {PureComponent} from 'react';
 import {ImageBackground, StyleSheet, Text, View} from 'react-native';
-import {scaleHorizontal, scaleVertical} from '../lib/util';
-import {APP_FONTS} from '../styleguide/Fonts';
-import {APP_COLORS} from '../styleguide/Colors';
+import {scaleHorizontal, scaleVertical} from '../../lib/util';
+import {APP_FONTS} from '../../styleguide/Fonts';
+import {APP_COLORS} from '../../styleguide/Colors';
 
 export default class DictionarySmallCard extends PureComponent {
     render() {

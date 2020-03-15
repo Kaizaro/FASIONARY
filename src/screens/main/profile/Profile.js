@@ -3,7 +3,8 @@ import {SafeAreaView, StyleSheet, Text, View} from 'react-native';
 import {scaleHorizontal, scaleVertical} from '../../../lib/util';
 import {APP_FONTS} from '../../../styleguide/Fonts';
 import {APP_COLORS} from '../../../styleguide/Colors';
-import Title from '../../../components/Title';
+import Title from '../../../components/common/Title';
+import Description from '../../../components/common/Description';
 
 export default class Profile extends Component {
     render() {
@@ -11,11 +12,10 @@ export default class Profile extends Component {
             <SafeAreaView style={{flex: 1}}>
                 <View style={styles.container}>
                     <Title title={'Profile'} />
-                    <View style={styles.divideContainer}>
-                        <Text style={styles.text}>
-                            Profile not available right now
-                        </Text>
-                    </View>
+                    <Description
+                        text={'Profile not available right now'}
+                        viewStyle={styles.divideContainer}
+                    />
                 </View>
             </SafeAreaView>
         );

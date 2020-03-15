@@ -1,8 +1,8 @@
 import React, {PureComponent} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
-import {APP_FONTS} from '../styleguide/Fonts';
-import {scaleHorizontal} from '../lib/util';
-import {APP_COLORS} from '../styleguide/Colors';
+import {APP_FONTS} from '../../styleguide/Fonts';
+import {scaleHorizontal} from '../../lib/util';
+import {APP_COLORS} from '../../styleguide/Colors';
 
 export default class Title extends PureComponent {
     render() {
