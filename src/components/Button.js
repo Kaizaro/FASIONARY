@@ -7,14 +7,20 @@ import {APP_FONTS} from '../styleguide/Fonts';
 
 export default class Button extends Component {
     render() {
-        const {icon, text, style, textStyle} = this.props;
+        const {icon, text, style, textStyle, onPress} = this.props;
         return (
             <TouchableOpacity
+                activeOpacity={0.7}
+                onPress={onPress}
                 style={{
                     ...styles.container,
                     ...style,
                 }}>
-                <Icon name={'star'} color={APP_COLORS.BADGE_COLORS.YELLOW} size={20} />
+                <Icon
+                    name={'star'}
+                    color={APP_COLORS.BADGE_COLORS.YELLOW}
+                    size={20}
+                />
                 <Text
                     style={{
                         ...styles.text,
@@ -39,7 +45,7 @@ const styles = StyleSheet.create({
     },
     text: {
         marginLeft: scaleHorizontal(5),
-        fontFamily: APP_FONTS.SOFIA_PRO_EXTRA_LIGHT,
+        fontFamily: APP_FONTS.TEXT_MAIN,
         fontSize: scaleHorizontal(20),
         color: 'white',
     },

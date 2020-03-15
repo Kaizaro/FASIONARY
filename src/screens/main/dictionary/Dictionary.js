@@ -126,12 +126,12 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
     },
     title: {
-        fontFamily: APP_FONTS.SOFIA_BOLD,
+        fontFamily: APP_FONTS.TITLE,
         fontSize: scaleHorizontal(36),
-        color: APP_COLORS.PRIMARY_COLOR,
+        color: APP_COLORS.PRIMARY_COLOR_ORANGE,
     },
     text: {
-        fontFamily: APP_FONTS.SOFIA_PRO_EXTRA_LIGHT,
+        fontFamily: APP_FONTS.TEXT_MAIN,
         fontSize: scaleHorizontal(16),
         color: APP_COLORS.BLACK_COLOR,
     },

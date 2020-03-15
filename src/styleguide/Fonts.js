@@ -1,5 +1,9 @@
 export const APP_FONTS = {
-    SOFIA_BOLD: 'SofiaProBold',
-    SOFIA_PRO_EXTRA_LIGHT: 'SofiaProExtraLight',
-    SOFIA_PRO_EXTRA_LIGHT_ITALIC: 'SofiaProExtraLight-Italic',
+    TITLE: 'SofiaProBold',
+    TEXT_MAIN: 'SofiaProExtraLight',
+    TEXT_ALTERNATIVE: 'SofiaProExtraLight-Italic',
 };
+
+// Title: Sofia Bold
+// Text Main: Sofia Extra Light
+// Text Alternative: Sofia Extra Light Italic

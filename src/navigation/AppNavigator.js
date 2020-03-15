@@ -4,7 +4,6 @@ import {Image} from 'react-native';
 import {DefaultTheme, NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import test from '../screens/test';
 import {APP_COLORS} from '../styleguide/Colors';
 import Courses from '../screens/main/courses/Courses';
 import Dictionary from '../screens/main/dictionary/Dictionary';
@@ -37,7 +36,7 @@ const AppStackSwitcher = () => (
 
 const AuthStackSwitcher = props => (
     <AuthStack.Navigator>
-        <AuthStack.Screen name={'test'} component={test} />
+        <AuthStack.Screen name={'Auth'} component={Profile} />
     </AuthStack.Navigator>
 );
 

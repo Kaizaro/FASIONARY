@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     label: {
-        fontFamily: APP_FONTS.SOFIA_PRO_EXTRA_LIGHT,
+        fontFamily: APP_FONTS.TEXT_ALTERNATIVE,
         fontSize: scaleHorizontal(16),
         color: APP_COLORS.BLACK_COLOR,
     },
