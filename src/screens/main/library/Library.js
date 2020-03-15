@@ -1,12 +1,45 @@
 import React, {Component} from 'react';
-import {Text, View} from 'react-native';
+import {SafeAreaView, StyleSheet, Text, View} from 'react-native';
+import {scaleHorizontal, scaleVertical} from '../../../lib/util';
+import {APP_FONTS} from '../../../styleguide/Fonts';
+import {APP_COLORS} from '../../../styleguide/Colors';
+import Title from '../../../components/Title';
 
 export default class Library extends Component {
     render() {
         return (
-            <View>
-                <Text>Library</Text>
-            </View>
+            <SafeAreaView style={{flex: 1}}>
+                <View style={styles.container}>
+                    <Title title={'Library'} />
+                    <View style={styles.divideContainer}>
+                        <Text style={styles.text}>
+                            Library not available right now
+                        </Text>
+                    </View>
+                </View>
+            </SafeAreaView>
         );
     }
-};
+}
+
+const styles = StyleSheet.create({
+    container: {
+        flexDirection: 'column',
+        paddingVertical: scaleVertical(20),
+        paddingHorizontal: scaleHorizontal(20),
+        justifyContent: 'flex-start',
+    },
+    divideContainer: {
+        marginTop: scaleVertical(20),
+    },
+    title: {
+        fontFamily: APP_FONTS.TITLE,
+        fontSize: scaleHorizontal(36),
+        color: APP_COLORS.PRIMARY_COLOR_ORANGE,
+    },
+    text: {
+        fontFamily: APP_FONTS.TEXT_MAIN,
+        fontSize: scaleHorizontal(16),
+        color: APP_COLORS.BLACK_COLOR,
+    },
+});

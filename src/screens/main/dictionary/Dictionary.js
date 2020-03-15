@@ -9,6 +9,7 @@ import _ from 'lodash';
 
 import image from '../../../../assets/images/sample.jpeg';
 import DictionarySmallCard from '../../../components/DictionarySmallCard';
+import Title from '../../../components/Title';
 
 export default class Dictionary extends Component {
     state = {
@@ -73,9 +74,7 @@ export default class Dictionary extends Component {
         return (
             <SafeAreaView style={{flex: 1}}>
                 <View style={styles.container}>
-                    <View style={styles.divideContainer}>
-                        <Text style={styles.title}>Visual Dictionary</Text>
-                    </View>
+                    <Title title={'Dictionary'} />
                     <View style={styles.divideContainer}>
                         <Text style={styles.text}>
                             Visual Dictionary helps you to define professional
