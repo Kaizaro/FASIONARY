@@ -5,11 +5,7 @@ import {DefaultTheme, NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import test from '../screens/test';
-import {
-    BACKGROUND_COLOR,
-    BADGE_COLORS,
-    BLACK_COLOR,
-} from '../styleguide/Colors';
+import {APP_COLORS} from '../styleguide/Colors';
 import Courses from '../screens/main/courses/Courses';
 import Dictionary from '../screens/main/dictionary/Dictionary';
 import Library from '../screens/main/library/Library';
@@ -51,8 +47,8 @@ const MainStackSwitcher = props => (
         tabBarOptions={{
             showIcon: true,
             showLabel: false,
-            activeTintColor: BADGE_COLORS.SPACE_BLUE,
-            inactiveTintColor: BLACK_COLOR,
+            activeTintColor: APP_COLORS.BADGE_COLORS.SPACE_BLUE,
+            inactiveTintColor: APP_COLORS.BLACK_COLOR,
         }}>
         <Tab.Screen
             name={'Dictionary'}
@@ -113,7 +109,7 @@ const theme = {
     ...DefaultTheme,
     colors: {
         ...DefaultTheme.colors,
-        background: BACKGROUND_COLOR,
+        background: APP_COLORS.BACKGROUND_COLOR,
     },
 };
 
@@ -122,7 +118,9 @@ const tabIconStyle = active => ({
     justifyContent: 'center',
     width: 40,
     height: 40,
-    tintColor: active ? BADGE_COLORS.SPACE_BLUE : BLACK_COLOR,
+    tintColor: active
+        ? APP_COLORS.BADGE_COLORS.SPACE_BLUE
+        : APP_COLORS.BLACK_COLOR,
 });
 
 const AppNavigator = () => (

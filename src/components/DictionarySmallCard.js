@@ -11,7 +11,7 @@ export default class DictionarySmallCard extends PureComponent {
             <View style={styles.container}>
                 <ImageBackground
                     source={image}
-                    style={styles.image}
+                    style={styles.container}
                     resizeMode={'cover'}>
                     <View style={styles.labelContainer}>
                         <Text style={styles.label}>{text}</Text>
@@ -25,23 +25,21 @@ export default class DictionarySmallCard extends PureComponent {
 const styles = StyleSheet.create({
     container: {
         width: scaleHorizontal(144),
-        height: scaleVertical(160),
+        height: scaleHorizontal(144),
         borderRadius: scaleVertical(20),
-    },
-    image: {
-        width: scaleHorizontal(144),
-        height: scaleVertical(160),
+        justifyContent: 'flex-end',
+        overflow: 'hidden',
     },
     labelContainer: {
         width: '100%',
         height: scaleVertical(40),
-        opacity: '20%',
+        backgroundColor: `${APP_COLORS.BACKGROUND_COLOR}50`,
         justifyContent: 'center',
         alignItems: 'center',
     },
     label: {
-        fontFamily: APP_FONTS.SOFIA_PRO_EXTRA_LIGHT_ITALIC,
-        fontSize: scaleHorizontal(12),
+        fontFamily: APP_FONTS.SOFIA_PRO_EXTRA_LIGHT,
+        fontSize: scaleHorizontal(16),
         color: APP_COLORS.BLACK_COLOR,
     },
 });
