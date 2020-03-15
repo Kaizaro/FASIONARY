@@ -11,7 +11,7 @@ export default class DictionarySmallCard extends PureComponent {
             <View style={styles.container}>
                 <ImageBackground
                     source={image}
-                    style={styles.container}
+                    style={styles.image}
                     resizeMode={'cover'}>
                     <View style={styles.labelContainer}>
                         <Text style={styles.label}>{text}</Text>
@@ -24,6 +24,11 @@ export default class DictionarySmallCard extends PureComponent {
 
 const styles = StyleSheet.create({
     container: {
+        width: scaleHorizontal(144),
+        height: scaleHorizontal(144),
+        borderRadius: scaleVertical(20),
+    },
+    image: {
         width: scaleHorizontal(144),
         height: scaleHorizontal(144),
         borderRadius: scaleVertical(20),
