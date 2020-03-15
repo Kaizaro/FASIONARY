@@ -6,13 +6,13 @@ import {createStackNavigator} from '@react-navigation/stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {APP_COLORS} from '../styleguide/Colors';
 import Courses from '../screens/main/courses/Courses';
-import Dictionary from '../screens/main/dictionary/Dictionary';
 import Library from '../screens/main/library/Library';
 import Profile from '../screens/main/profile/Profile';
 import DictionaryIcon from '../../assets/icons/tabBarIcons/DictionaryTabIcon.png';
 import CoursesIcon from '../../assets/icons/tabBarIcons/CoursesTabIcon.png';
 import LibraryIcon from '../../assets/icons/tabBarIcons/LibraryTabIcon.png';
 import Init from '../Init';
+import Categories from '../screens/main/dictionary/Categories';
 
 const AppStack = createStackNavigator();
 const AuthStack = createStackNavigator();
@@ -42,7 +42,7 @@ const AuthStackSwitcher = props => (
 
 const MainStackSwitcher = props => (
     <Tab.Navigator
-        initialRouteName={'Dictionary'}
+        initialRouteName={'Categories'}
         tabBarOptions={{
             showIcon: true,
             showLabel: false,
@@ -50,8 +50,8 @@ const MainStackSwitcher = props => (
             inactiveTintColor: APP_COLORS.BLACK_COLOR,
         }}>
         <Tab.Screen
-            name={'Dictionary'}
-            component={Dictionary}
+            name={'Categories'}
+            component={Categories}
             options={{
                 tabBarIcon: state => (
                     <Image

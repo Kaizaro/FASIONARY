@@ -12,7 +12,7 @@ import DictionarySmallCard from '../../../components/dictionary/DictionarySmallC
 import Title from '../../../components/common/Title';
 import Description from '../../../components/common/Description';
 
-export default class Dictionary extends Component {
+export default class Categories extends Component {
     state = {
         categories: [
             {
