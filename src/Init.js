@@ -1,9 +1,9 @@
-import React, {PureComponent} from 'react';
+import React, {Component} from 'react';
 import {ActivityIndicator, Dimensions, StyleSheet, View} from 'react-native';
 
 export let {width, height} = Dimensions.get('window');
 
-export default class Init extends PureComponent {
+export default class Init extends Component {
     componentDidMount() {
         setTimeout(() => {
             this.props.navigation.reset({
