@@ -1,14 +1,23 @@
 import React, {PureComponent} from 'react';
-import {ImageBackground, StyleSheet, Text, View} from 'react-native';
+import {
+    ImageBackground,
+    StyleSheet,
+    Text,
+    TouchableOpacity,
+    View,
+} from 'react-native';
 import {scaleHorizontal, scaleVertical} from '../../lib/util';
 import {APP_FONTS} from '../../styleguide/Fonts';
 import {APP_COLORS} from '../../styleguide/Colors';
 
 export default class DictionarySmallCard extends PureComponent {
     render() {
-        const {image, text} = this.props;
+        const {image, text, onPress} = this.props;
         return (
-            <View style={styles.container}>
+            <TouchableOpacity
+                activeOpacity={0.7}
+                onPress={onPress}
+                style={styles.container}>
                 <ImageBackground
                     source={image}
                     style={styles.image}
@@ -17,7 +26,7 @@ export default class DictionarySmallCard extends PureComponent {
                         <Text style={styles.label}>{text}</Text>
                     </View>
                 </ImageBackground>
-            </View>
+            </TouchableOpacity>
         );
     }
 }
