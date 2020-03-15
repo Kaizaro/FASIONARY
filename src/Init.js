@@ -5,6 +5,7 @@ export let {width, height} = Dimensions.get('window');
 
 export default class Init extends Component {
     componentDidMount() {
+        this._handleOrientation();
         setTimeout(() => {
             this.props.navigation.reset({
                 index: 0,
@@ -17,8 +18,23 @@ export default class Init extends Component {
         }, 3000);
     }
 
+    _handleOrientation = () => {
+        Dimensions.addEventListener('change', ({window, screen}) => {
+            console.log(window.width, window.height);
+            width = window.width;
+            height = window.height;
+            console.log('\n\n\nafter listener', width, height);
+        });
+    };
+
+    componentWillUnmount() {
+        console.log('unmount');
+        Dimensions.removeEventListener('change');
+    }
+
     render() {
-        console.log(this.props);
+        console.log('\n\nwidth', width);
+        console.log('\n\nheight', height);
         return (
             <View style={styles.container}>
                 <ActivityIndicator size={'large'} color={'blue'} />
