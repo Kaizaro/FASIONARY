@@ -56,15 +56,18 @@ export default class SubCategories extends Component {
     render() {
         console.log(width, height);
         const {subCategories} = this.state;
-        const chunkedCategories = _.chunk(subCategories, 2);
-        console.log(chunkedCategories);
+        const chunkedSubCategories = _.chunk(subCategories, 2);
+        console.log(chunkedSubCategories);
+        console.log(this.props.navigation);
+        console.log(this.props.route);
+        const tag = this.props.route.params.tag.name;
         return (
             <SafeAreaView style={{flex: 1}}>
                 <View style={APP_STYLES.CONTAINER}>
-                    <Tag tag={this.props.navigation.getParam('tag')} />
+                    <Tag tag={tag} />
                     <View style={styles.flatlistContainer}>
                         <FlatList
-                            data={chunkedCategories}
+                            data={chunkedSubCategories}
                             renderItem={this.renderItem}
                             contentContainerStyle={
                                 styles.flatlistContentContainer

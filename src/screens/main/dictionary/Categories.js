@@ -51,9 +51,11 @@ export default class Categories extends Component {
         ],
     };
 
-    onPressCard = item => {
-        console.log(item);
-        // this.props.navigation.navigate('')
+    onPressCard = cardData => {
+        console.log(cardData);
+        this.props.navigation.navigate('SubCategories', {
+            tag: cardData,
+        });
     };
 
     renderItem = ({item, index}) => {
@@ -66,7 +68,7 @@ export default class Categories extends Component {
                         <DictionarySmallCard
                             image={cardData.image}
                             text={cardData.name}
-                            onPress={() => this.onPressCard(item)}
+                            onPress={() => this.onPressCard(cardData)}
                         />
                     );
                 })}

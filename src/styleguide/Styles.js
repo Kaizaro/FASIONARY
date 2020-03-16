@@ -16,11 +16,12 @@ export const APP_STYLES = StyleSheet.create({
         height: scaleVertical(10),
     },
     TAG: {
-        paddingHorizontal: scaleHorizontal(10),
-        paddingVertical: scaleVertical(5),
-        borderRadius: scaleVertical(10),
+        width: scaleHorizontal(72),
+        height: scaleVertical(30),
+        borderRadius: scaleVertical(8),
         justifyContent: 'center',
         alignItems: 'center',
+        backgroundColor: APP_COLORS.BADGE_COLORS.PINK_PURPLE,
     },
     TITLE_TEXT: {
         fontFamily: APP_FONTS.TITLE,
