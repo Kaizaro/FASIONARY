@@ -12,48 +12,28 @@ import DictionarySmallCard from '../../../components/dictionary/DictionarySmallC
 import Title from '../../../components/common/Title';
 import Description from '../../../components/common/Description';
 import {APP_STYLES} from '../../../styleguide/Styles';
+import Tag from '../../../components/common/Tag';
 
-export default class Categories extends Component {
+export default class SubCategories extends Component {
     state = {
-        categories: [
+        subCategories: [
             {
                 image: image,
-                name: 'Clothes',
+                name: 'Bottom',
             },
             {
                 image: image,
-                name: 'Accessories',
+                name: 'Skirt',
             },
             {
                 image: image,
-                name: 'Pattern',
+                name: 'Dress',
             },
             {
                 image: image,
-                name: 'Sewing',
-            },
-            {
-                image: image,
-                name: 'Any',
-            },
-            {
-                image: image,
-                name: 'Any',
-            },
-            {
-                image: image,
-                name: 'Any',
-            },
-            {
-                image: image,
-                name: 'Any',
+                name: 'Outwear',
             },
         ],
-    };
-
-    onPressCard = item => {
-        console.log(item);
-        // this.props.navigation.navigate('')
     };
 
     renderItem = ({item, index}) => {
@@ -66,7 +46,6 @@ export default class Categories extends Component {
                         <DictionarySmallCard
                             image={cardData.image}
                             text={cardData.name}
-                            onPress={() => this.onPressCard(item)}
                         />
                     );
                 })}
@@ -76,20 +55,13 @@ export default class Categories extends Component {
 
     render() {
         console.log(width, height);
-        const {categories} = this.state;
-        const chunkedCategories = _.chunk(categories, 2);
+        const {subCategories} = this.state;
+        const chunkedCategories = _.chunk(subCategories, 2);
         console.log(chunkedCategories);
-        const description =
-            'Visual Dictionary helps you to define professional tools and termins by photo and images, and provides translations on other languages';
         return (
             <SafeAreaView style={{flex: 1}}>
                 <View style={APP_STYLES.CONTAINER}>
-                    <Title title={'Dictionary'} />
-                    <Description
-                        text={description}
-                        viewStyle={styles.divideContainer}
-                    />
-                    <Button text={'Favorites'} style={styles.divideContainer} />
+                    <Tag tag={this.props.navigation.getParam('tag')} />
                     <View style={styles.flatlistContainer}>
                         <FlatList
                             data={chunkedCategories}

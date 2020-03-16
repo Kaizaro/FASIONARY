@@ -13,10 +13,15 @@ import CoursesIcon from '../../assets/icons/tabBarIcons/CoursesTabIcon.png';
 import LibraryIcon from '../../assets/icons/tabBarIcons/LibraryTabIcon.png';
 import Init from '../Init';
 import Categories from '../screens/main/dictionary/Categories';
+import SubCategories from '../screens/main/dictionary/SubCategories';
 
 const AppStack = createStackNavigator();
 const AuthStack = createStackNavigator();
 const Tab = createBottomTabNavigator();
+const DictionaryStack = createStackNavigator();
+const CoursesStack = createStackNavigator();
+const LibraryStack = createStackNavigator();
+const ProfileStack = createStackNavigator();
 
 const AppStackSwitcher = () => (
     <AppStack.Navigator initialRouteName={'Init'}>
@@ -40,9 +45,39 @@ const AuthStackSwitcher = props => (
     </AuthStack.Navigator>
 );
 
+const DictionaryStackSwitcher = () => (
+    <DictionaryStack.Navigator
+        initialRouteName={'Categories'}
+        headerMode={false}>
+        <DictionaryStack.Screen name={'Categories'} component={Categories} />
+        <DictionaryStack.Screen
+            name={'SubCategories'}
+            component={SubCategories}
+        />
+    </DictionaryStack.Navigator>
+);
+
+const CoursesStackSwitcher = () => (
+    <CoursesStack.Navigator initialRouteName={'Courses'} headerMode={false}>
+        <CoursesStack.Screen name={'Courses'} component={Courses} />
+    </CoursesStack.Navigator>
+);
+
+const LibraryStackSwitcher = () => (
+    <LibraryStack.Navigator initialRouteName={'Library'} headerMode={false}>
+        <LibraryStack.Screen name={'Library'} component={Library} />
+    </LibraryStack.Navigator>
+);
+
+const ProfileStackSwitcher = () => (
+    <ProfileStack.Navigator initialRouteName={'Profile'} headerMode={false}>
+        <ProfileStack.Screen name={'Profile'} component={Profile} />
+    </ProfileStack.Navigator>
+);
+
 const MainStackSwitcher = props => (
     <Tab.Navigator
-        initialRouteName={'Categories'}
+        initialRouteName={'DictionaryStackSwitcher'}
         tabBarOptions={{
             showIcon: true,
             showLabel: false,
@@ -50,8 +85,8 @@ const MainStackSwitcher = props => (
             inactiveTintColor: APP_COLORS.BLACK_COLOR,
         }}>
         <Tab.Screen
-            name={'Categories'}
-            component={Categories}
+            name={'DictionaryStackSwitcher'}
+            component={DictionaryStackSwitcher}
             options={{
                 tabBarIcon: state => (
                     <Image
@@ -63,8 +98,8 @@ const MainStackSwitcher = props => (
             }}
         />
         <Tab.Screen
-            name={'Courses'}
-            component={Courses}
+            name={'CoursesStackSwitcher'}
+            component={CoursesStackSwitcher}
             options={{
                 tabBarIcon: state => (
                     <Image
@@ -76,8 +111,8 @@ const MainStackSwitcher = props => (
             }}
         />
         <Tab.Screen
-            name={'Library'}
-            component={Library}
+            name={'LibraryStackSwitcher'}
+            component={LibraryStackSwitcher}
             options={{
                 tabBarIcon: state => (
                     <Image
@@ -89,8 +124,8 @@ const MainStackSwitcher = props => (
             }}
         />
         <Tab.Screen
-            name={'Profile'}
-            component={Profile}
+            name={'ProfileStackSwitcher'}
+            component={ProfileStackSwitcher}
             options={{
                 tabBarIcon: state => (
                     <Image

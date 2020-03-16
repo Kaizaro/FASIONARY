@@ -10,6 +10,18 @@ export const APP_STYLES = StyleSheet.create({
         paddingHorizontal: scaleHorizontal(20),
         justifyContent: 'flex-start',
     },
+    DIVIDE: {
+        marginLeft: scaleHorizontal(20),
+        width: scaleHorizontal(50),
+        height: scaleVertical(10),
+    },
+    TAG: {
+        paddingHorizontal: scaleHorizontal(10),
+        paddingVertical: scaleVertical(5),
+        borderRadius: scaleVertical(10),
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
     TITLE_TEXT: {
         fontFamily: APP_FONTS.TITLE,
         fontSize: scaleHorizontal(36),
