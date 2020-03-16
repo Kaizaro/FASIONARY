@@ -1,8 +1,6 @@
 import React, {PureComponent} from 'react';
-import {StyleSheet, Text, View} from 'react-native';
-import {APP_FONTS} from '../../styleguide/Fonts';
-import {scaleHorizontal} from '../../lib/util';
-import {APP_COLORS} from '../../styleguide/Colors';
+import {Text, View} from 'react-native';
+import {APP_STYLES} from '../../styleguide/Styles';
 
 export default class Title extends PureComponent {
     render() {
@@ -11,7 +9,7 @@ export default class Title extends PureComponent {
             <View style={viewStyle}>
                 <Text
                     style={{
-                        ...styles.title,
+                        ...APP_STYLES.TITLE_TEXT,
                         ...textStyle,
                     }}>
                     {title}
@@ -20,11 +18,3 @@ export default class Title extends PureComponent {
         );
     }
 }
-
-const styles = StyleSheet.create({
-    title: {
-        fontFamily: APP_FONTS.TITLE,
-        fontSize: scaleHorizontal(36),
-        color: APP_COLORS.PRIMARY_COLOR_ORANGE,
-    },
-});

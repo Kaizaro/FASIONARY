@@ -11,6 +11,7 @@ import image from '../../../../assets/images/sample.jpeg';
 import DictionarySmallCard from '../../../components/dictionary/DictionarySmallCard';
 import Title from '../../../components/common/Title';
 import Description from '../../../components/common/Description';
+import {APP_STYLES} from '../../../styleguide/Styles';
 
 export default class Categories extends Component {
     state = {
@@ -76,7 +77,7 @@ export default class Categories extends Component {
             'Visual Dictionary helps you to define professional tools and termins by photo and images, and provides translations on other languages';
         return (
             <SafeAreaView style={{flex: 1}}>
-                <View style={styles.container}>
+                <View style={APP_STYLES.CONTAINER}>
                     <Title title={'Dictionary'} />
                     <Description
                         text={description}
@@ -99,12 +100,6 @@ export default class Categories extends Component {
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flexDirection: 'column',
-        paddingVertical: scaleVertical(20),
-        paddingHorizontal: scaleHorizontal(20),
-        justifyContent: 'flex-start',
-    },
     divideContainer: {
         marginTop: scaleVertical(20),
     },
@@ -123,15 +118,5 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-between',
-    },
-    title: {
-        fontFamily: APP_FONTS.TITLE,
-        fontSize: scaleHorizontal(36),
-        color: APP_COLORS.PRIMARY_COLOR_ORANGE,
-    },
-    text: {
-        fontFamily: APP_FONTS.TEXT_MAIN,
-        fontSize: scaleHorizontal(16),
-        color: APP_COLORS.BLACK_COLOR,
     },
 });
