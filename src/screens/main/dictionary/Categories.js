@@ -54,7 +54,7 @@ export default class Categories extends Component {
     onPressCard = cardData => {
         console.log(cardData);
         this.props.navigation.navigate('SubCategories', {
-            tag: cardData,
+            tagList: [cardData],
         });
     };
 
@@ -99,6 +99,8 @@ export default class Categories extends Component {
                             contentContainerStyle={
                                 styles.flatlistContentContainer
                             }
+                            bounces={false}
+                            showsVerticalScrollIndicator={false}
                         />
                     </View>
                 </View>

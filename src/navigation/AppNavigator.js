@@ -14,6 +14,7 @@ import LibraryIcon from '../../assets/icons/tabBarIcons/LibraryTabIcon.png';
 import Init from '../Init';
 import Categories from '../screens/main/dictionary/Categories';
 import SubCategories from '../screens/main/dictionary/SubCategories';
+import DynamicGrid from '../screens/main/dictionary/DynamicGrid';
 
 const AppStack = createStackNavigator();
 const AuthStack = createStackNavigator();
@@ -54,6 +55,7 @@ const DictionaryStackSwitcher = () => (
             name={'SubCategories'}
             component={SubCategories}
         />
+        <DictionaryStack.Screen name={'DynamicGrid'} component={DynamicGrid} />
     </DictionaryStack.Navigator>
 );
 

@@ -14,6 +14,7 @@ import Description from '../../../components/common/Description';
 import {APP_STYLES} from '../../../styleguide/Styles';
 import Tag from '../../../components/common/Tag';
 import Divide from '../../../components/common/Divide';
+import {TagRow} from '../../../components/common/TagRow';
 
 export default class SubCategories extends Component {
     state = {
@@ -37,6 +38,18 @@ export default class SubCategories extends Component {
         ],
     };
 
+    onCardPress = cardData => {
+        let oldTagList = [];
+        this.props.route.params.tagList.map(tag => {
+            console.log(tag);
+            oldTagList.push(tag);
+        });
+        oldTagList.push(cardData);
+        this.props.navigation.navigate('DynamicGrid', {
+            tagList: oldTagList,
+        });
+    };
+
     renderItem = ({item, index}) => {
         console.log(item, index);
         return (
@@ -47,6 +60,7 @@ export default class SubCategories extends Component {
                         <DictionarySmallCard
                             image={cardData.image}
                             text={cardData.name}
+                            onPress={() => this.onCardPress(cardData)}
                         />
                     );
                 })}
@@ -61,12 +75,13 @@ export default class SubCategories extends Component {
         console.log(chunkedSubCategories);
         console.log(this.props.navigation);
         console.log(this.props.route);
-        const tag = this.props.route.params.tag.name;
+        const tagList = this.props.route.params.tagList;
         return (
             <SafeAreaView style={{flex: 1}}>
                 <View style={APP_STYLES.CONTAINER}>
                     <Divide />
-                    <Tag tag={tag} viewStyle={styles.divideContainer} />
+                    <TagRow tagList={tagList} />
+                    {/*<Tag tag={tag} viewStyle={styles.divideContainer} />*/}
                     <View style={styles.flatlistContainer}>
                         <FlatList
                             data={chunkedSubCategories}
