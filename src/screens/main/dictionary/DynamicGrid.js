@@ -5,7 +5,7 @@ import {
     FlatList,
     Image,
     SafeAreaView,
-    StyleSheet,
+    StyleSheet, Text,
     TouchableOpacity,
     View,
 } from 'react-native';
@@ -18,36 +18,52 @@ import outwearFrosterCoat from '../../../../assets/sets/outwear/02-Frock-Coat.pn
 import outwearFullTrenchCoat from '../../../../assets/sets/outwear/03-Full-Trench-Coat.png';
 import outwearMackintoshRaincoatCoat from '../../../../assets/sets/outwear/04-Mackintosh-Raincoat.png';
 import outwearUlsterette from '../../../../assets/sets/outwear/05-Ulsterette.png';
+import {APP_FONTS} from '../../../styleguide/Fonts';
+import {APP_STYLES} from '../../../styleguide/Styles';
 
 const data = [
-    outwearDusterCoat,
-    outwearFrosterCoat,
-    outwearFullTrenchCoat,
-    outwearMackintoshRaincoatCoat,
-    outwearUlsterette,
+    {
+        tag: 'duster',
+        name: 'Duster coat',
+        image: outwearDusterCoat,
+    },
+    {
+        tag: 'froster',
+        name: 'Froster coat',
+        image: outwearFrosterCoat,
+    },
+    {
+        tag: 'full trench',
+        name: 'Full trench coat',
+        image: outwearFullTrenchCoat,
+    },
+    {
+        tag: 'mackintosh',
+        name: 'Mackintosh raincoat coat',
+        image: outwearMackintoshRaincoatCoat,
+    },
+    {
+        tag: 'ulsterette',
+        name: 'Ulsterette',
+        image: outwearUlsterette,
+    },
 ];
-
-const getImageSet = tagList => {
-    console.log('TAG LIST', tagList);
-    if (tagList[1].name === 'Outwear') {
-        console.log(data);
-        return data;
-    }
-};
 
 const renderItem = ({item, index}, tagList) => {
     console.log(item, index, tagList);
-    getImageSet(tagList);
     return (
-        <TouchableOpacity onPress={() => console.log('pressed')}>
+        <TouchableOpacity style={styles.itemContainer} onPress={() => console.log('pressed')}>
             <Image
                 style={{
                     width: scaleHorizontal(165),
                     height: scaleHorizontal(300),
                 }}
                 resizeMode={'contain'}
-                source={item}
+                source={item.image}
             />
+            <View style={styles.itemTextContainer}>
+                <Text style={APP_STYLES.MAIN_TEXT}>{item.name}</Text>
+            </View>
         </TouchableOpacity>
     );
 };
@@ -86,8 +102,16 @@ const styles = StyleSheet.create({
         paddingBottom: scaleVertical(20),
     },
     itemContainer: {
+        alignItems: 'center',
+        // justifyContent: 'center',
         // borderColor: 'red',
         // borderWidth: 1,
+    },
+    itemTextContainer: {
+        marginTop: scaleVertical(5),
+        width: '70%',
+        justifyContent: 'center',
+        alignItems: 'center',
     },
 });
 
