@@ -5,7 +5,8 @@ import {
     FlatList,
     Image,
     SafeAreaView,
-    StyleSheet, Text,
+    StyleSheet,
+    Text,
     TouchableOpacity,
     View,
 } from 'react-native';
@@ -49,10 +50,22 @@ const data = [
     },
 ];
 
-const renderItem = ({item, index}, tagList) => {
+const onImagePress = (item, index, tagList, props) => {
+    console.log(item, index, tagList);
+    let oldTagList = tagList;
+    oldTagList.push(item);
+    props.navigation.navigate('DictionaryCard', {
+        tagList: tagList,
+        cardData: item,
+    });
+};
+
+const renderItem = ({item, index}, tagList, props) => {
     console.log(item, index, tagList);
     return (
-        <TouchableOpacity style={styles.itemContainer} onPress={() => console.log('pressed')}>
+        <TouchableOpacity
+            style={styles.itemContainer}
+            onPress={() => onImagePress(item, index, tagList, props)}>
             <Image
                 style={{
                     width: scaleHorizontal(165),
@@ -78,9 +91,10 @@ const DynamicGrid = props => {
             <View style={styles.divideContainer}>
                 <FlatList
                     data={data}
-                    renderItem={itemData => renderItem(itemData, tagList)}
+                    renderItem={itemData => renderItem(itemData, tagList, props)}
                     numColumns={2}
                     contentContainerStyle={styles.contentContainer}
+                    showsVerticalScrollIndicator={false}
                 />
             </View>
         </DefaultContainer>
@@ -103,6 +117,7 @@ const styles = StyleSheet.create({
     },
     itemContainer: {
         alignItems: 'center',
+        marginBottom: scaleVertical(10),
         // justifyContent: 'center',
         // borderColor: 'red',
         // borderWidth: 1,

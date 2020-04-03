@@ -16,11 +16,13 @@ export default class Button extends Component {
                     ...styles.container,
                     ...style,
                 }}>
-                <Icon
-                    name={'star'}
-                    color={APP_COLORS.BADGE_COLORS.YELLOW}
-                    size={20}
-                />
+                {icon && (
+                    <Icon
+                        name={'star'}
+                        color={APP_COLORS.BADGE_COLORS.YELLOW}
+                        size={20}
+                    />
+                )}
                 <Text
                     style={{
                         ...styles.text,

@@ -91,7 +91,11 @@ export default class Categories extends Component {
                         text={description}
                         viewStyle={styles.divideContainer}
                     />
-                    <Button text={'Favorites'} style={styles.divideContainer} />
+                    <Button
+                        icon
+                        text={'Favorites'}
+                        style={styles.divideContainer}
+                    />
                     <View style={styles.flatlistContainer}>
                         <FlatList
                             data={chunkedCategories}

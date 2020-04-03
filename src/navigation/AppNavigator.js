@@ -15,6 +15,7 @@ import Init from '../Init';
 import Categories from '../screens/main/dictionary/Categories';
 import SubCategories from '../screens/main/dictionary/SubCategories';
 import DynamicGrid from '../screens/main/dictionary/DynamicGrid';
+import DictionaryCard from '../screens/main/dictionary/DictionaryCard';
 
 const AppStack = createStackNavigator();
 const AuthStack = createStackNavigator();
@@ -56,6 +57,10 @@ const DictionaryStackSwitcher = () => (
             component={SubCategories}
         />
         <DictionaryStack.Screen name={'DynamicGrid'} component={DynamicGrid} />
+        <DictionaryStack.Screen
+            name={'DictionaryCard'}
+            component={DictionaryCard}
+        />
     </DictionaryStack.Navigator>
 );
 
