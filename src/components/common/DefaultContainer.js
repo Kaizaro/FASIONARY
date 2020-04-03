@@ -1,6 +1,6 @@
 import React from 'react';
 import {FlatList, SafeAreaView, View} from 'react-native';
-import {APP_STYLES} from '../styleguide/Styles';
+import {APP_STYLES} from '../../styleguide/Styles';
 
 export const DefaultContainer = props => {
     return (
