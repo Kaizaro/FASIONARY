@@ -17,12 +17,12 @@
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* FASHIONARYTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* FASHIONARYTests.m */; };
 		A45975F59E7E8F20CFDDFE9A /* libPods-FASHIONARYTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05742DE37EEE4DA0477B9842 /* libPods-FASHIONARYTests.a */; };
+		A4EEB542952B47A1829BCDB2 /* SofiaBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 578FAF6D3B624CDBB73D5647 /* SofiaBold.ttf */; };
 		D11C033BC696A740694C4D0E /* libPods-FASHIONARY-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BBC9008270FA00856A495FE /* libPods-FASHIONARY-tvOSTests.a */; };
 		D17AD0C314985F0CFE57AE1A /* libPods-FASHIONARY-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE620DE92DB5596F1F9AF4D9 /* libPods-FASHIONARY-tvOS.a */; };
-		DBB3EF829B8AC04E39C61BFA /* libPods-FASHIONARY.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DD9C02CFDC66F3E73B52E367 /* libPods-FASHIONARY.a */; };
-		A4EEB542952B47A1829BCDB2 /* SofiaBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 578FAF6D3B624CDBB73D5647 /* SofiaBold.ttf */; };
-		F93D4D5424F6469FB7726B1A /* SofiaProExtraLight-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D323B53CBE7B4A51BA4A0776 /* SofiaProExtraLight-Italic.ttf */; };
 		D851E17EB3E14251A4336719 /* SofiaProExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F8C6D157BCA1472EB5BC104F /* SofiaProExtraLight.ttf */; };
+		DBB3EF829B8AC04E39C61BFA /* libPods-FASHIONARY.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DD9C02CFDC66F3E73B52E367 /* libPods-FASHIONARY.a */; };
+		F93D4D5424F6469FB7726B1A /* SofiaProExtraLight-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D323B53CBE7B4A51BA4A0776 /* SofiaProExtraLight-Italic.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +59,7 @@
 		15442A6B96A0E7CE8854720F /* Pods-FASHIONARY-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FASHIONARY-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-FASHIONARY-tvOS/Pods-FASHIONARY-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* FASHIONARY-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FASHIONARY-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* FASHIONARY-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FASHIONARY-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		578FAF6D3B624CDBB73D5647 /* SofiaBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SofiaBold.ttf; path = ../assets/fonts/SofiaBold.ttf; sourceTree = "<group>"; };
 		82D4A11134D105A4AD490C68 /* Pods-FASHIONARY-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FASHIONARY-tvOS.release.xcconfig"; path = "Target Support Files/Pods-FASHIONARY-tvOS/Pods-FASHIONARY-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		8CE667B7D7AF86383497E525 /* Pods-FASHIONARY.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FASHIONARY.release.xcconfig"; path = "Target Support Files/Pods-FASHIONARY/Pods-FASHIONARY.release.xcconfig"; sourceTree = "<group>"; };
 		9210E1AFBB10C8F9262219A4 /* Pods-FASHIONARYTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FASHIONARYTests.debug.xcconfig"; path = "Target Support Files/Pods-FASHIONARYTests/Pods-FASHIONARYTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -66,13 +67,12 @@
 		A7F66E629207A2CFE38D91F3 /* Pods-FASHIONARY.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FASHIONARY.debug.xcconfig"; path = "Target Support Files/Pods-FASHIONARY/Pods-FASHIONARY.debug.xcconfig"; sourceTree = "<group>"; };
 		BE620DE92DB5596F1F9AF4D9 /* libPods-FASHIONARY-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FASHIONARY-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C27369A2E1745FE8117D8114 /* Pods-FASHIONARYTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FASHIONARYTests.release.xcconfig"; path = "Target Support Files/Pods-FASHIONARYTests/Pods-FASHIONARYTests.release.xcconfig"; sourceTree = "<group>"; };
+		D323B53CBE7B4A51BA4A0776 /* SofiaProExtraLight-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SofiaProExtraLight-Italic.ttf"; path = "../assets/fonts/SofiaProExtraLight-Italic.ttf"; sourceTree = "<group>"; };
 		DD742ECE51997A61F51E486C /* Pods-FASHIONARY-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FASHIONARY-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-FASHIONARY-tvOSTests/Pods-FASHIONARY-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		DD9C02CFDC66F3E73B52E367 /* libPods-FASHIONARY.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FASHIONARY.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
-		578FAF6D3B624CDBB73D5647 /* SofiaBold.ttf */ = {isa = PBXFileReference; name = "SofiaBold.ttf"; path = "../assets/fonts/SofiaBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		D323B53CBE7B4A51BA4A0776 /* SofiaProExtraLight-Italic.ttf */ = {isa = PBXFileReference; name = "SofiaProExtraLight-Italic.ttf"; path = "../assets/fonts/SofiaProExtraLight-Italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		F8C6D157BCA1472EB5BC104F /* SofiaProExtraLight.ttf */ = {isa = PBXFileReference; name = "SofiaProExtraLight.ttf"; path = "../assets/fonts/SofiaProExtraLight.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F8C6D157BCA1472EB5BC104F /* SofiaProExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SofiaProExtraLight.ttf; path = ../assets/fonts/SofiaProExtraLight.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,7 +205,7 @@
 			sourceTree = "<group>";
 		};
 		F0D255B5C55A4351ADAE7FD2 /* Resources */ = {
-			isa = "PBXGroup";
+			isa = PBXGroup;
 			children = (
 				578FAF6D3B624CDBB73D5647 /* SofiaBold.ttf */,
 				D323B53CBE7B4A51BA4A0776 /* SofiaProExtraLight-Italic.ttf */,
@@ -213,7 +213,6 @@
 			);
 			name = Resources;
 			sourceTree = "<group>";
-			path = "";
 		};
 /* End PBXGroup section */
 
@@ -309,6 +308,9 @@
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
+					};
+					13B07F861A680F5B00A75B9A = {
+						DevelopmentTeam = 885PP34GXH;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -698,6 +700,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
+				DEVELOPMENT_TEAM = 885PP34GXH;
 				INFOPLIST_FILE = FASHIONARY/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 0.0.1;
@@ -706,7 +709,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fashionapp.fashionaryapp;
 				PRODUCT_NAME = FASHIONARY;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -718,6 +721,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 885PP34GXH;
 				INFOPLIST_FILE = FASHIONARY/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 0.0.1;
@@ -726,7 +730,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fashionapp.fashionaryapp;
 				PRODUCT_NAME = FASHIONARY;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
