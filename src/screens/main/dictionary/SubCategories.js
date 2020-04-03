@@ -13,6 +13,7 @@ import Title from '../../../components/common/Title';
 import Description from '../../../components/common/Description';
 import {APP_STYLES} from '../../../styleguide/Styles';
 import Tag from '../../../components/common/Tag';
+import Divide from '../../../components/common/Divide';
 
 export default class SubCategories extends Component {
     state = {
@@ -64,7 +65,8 @@ export default class SubCategories extends Component {
         return (
             <SafeAreaView style={{flex: 1}}>
                 <View style={APP_STYLES.CONTAINER}>
-                    <Tag tag={tag} />
+                    <Divide />
+                    <Tag tag={tag} viewStyle={styles.divideContainer} />
                     <View style={styles.flatlistContainer}>
                         <FlatList
                             data={chunkedSubCategories}
