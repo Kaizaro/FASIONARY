@@ -84,6 +84,7 @@ export default class SubCategories extends Component {
                     {/*<Tag tag={tag} viewStyle={styles.divideContainer} />*/}
                     <View style={styles.flatlistContainer}>
                         <FlatList
+                            keyExtractor={item => item.name}
                             data={chunkedSubCategories}
                             renderItem={this.renderItem}
                             contentContainerStyle={

@@ -98,6 +98,7 @@ export default class Categories extends Component {
                     />
                     <View style={styles.flatlistContainer}>
                         <FlatList
+                            keyExtractor={item => item.name}
                             data={chunkedCategories}
                             renderItem={this.renderItem}
                             contentContainerStyle={

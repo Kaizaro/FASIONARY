@@ -65,6 +65,7 @@ const DynamicGrid = props => {
             <TagRow tagList={tagList} />
             <View style={styles.divideContainer}>
                 <FlatList
+                    keyExtractor={item => item.tag + item.name}
                     data={DATA.OUTWEAR}
                     renderItem={itemData =>
                         renderItem(itemData, tagList, props)

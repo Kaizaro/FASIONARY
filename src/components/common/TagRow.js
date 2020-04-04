@@ -1,5 +1,5 @@
 import React from 'react';
-import {FlatList, ScrollView, StyleSheet} from 'react-native';
+import {FlatList, StyleSheet} from 'react-native';
 import {scaleHorizontal, scaleVertical} from '../../lib/util';
 import Tag from './Tag';
 
@@ -13,6 +13,7 @@ export const TagRow = props => {
     console.log(tagList);
     return (
         <FlatList
+            keyExtractor={item => item.name + 1}
             data={tagList}
             renderItem={renderItem}
             contentContainerStyle={styles.row}
