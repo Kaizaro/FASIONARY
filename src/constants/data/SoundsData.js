@@ -1,8 +1,8 @@
-import outwearDusterCoat from '../../../assets/sets/outwear/01-Duster-coat.png';
-import outwearFrosterCoat from '../../../assets/sets/outwear/02-Frock-Coat.png';
-import outwearFullTrenchCoat from '../../../assets/sets/outwear/03-Full-Trench-Coat.png';
-import outwearMackintoshRaincoatCoat from '../../../assets/sets/outwear/04-Mackintosh-Raincoat.png';
-import outwearUlsterette from '../../../assets/sets/outwear/05-Ulsterette.png';
+import outwearDusterCoat from '../../../assets/sounds/outwear/01 Duster coat.m4a';
+import outwearFrosterCoat from '../../../assets/sounds/outwear/02 Frock coat.m4a';
+import outwearFullTrenchCoat from '../../../assets/sounds/outwear/03 Full trench coat.m4a';
+import outwearMackintoshRaincoatCoat from '../../../assets/sounds/outwear/04 Mackintosh raincoat.m4a';
+import outwearUlsterette from '../../../assets/sounds/outwear/05 Ulsterette.m4a';
 
 export const SOUNDS_DATA = {
     OUTWEAR: {

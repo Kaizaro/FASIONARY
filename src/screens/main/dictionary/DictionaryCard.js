@@ -10,6 +10,8 @@ export default class DictionaryCard extends Component {
     render() {
         const cardData = this.props.route.params.cardData;
         const tagList = this.props.route.params.tagList;
+        console.log(cardData);
+        console.log(tagList);
         return (
             <DefaultContainer>
                 <Divide />
@@ -23,7 +25,10 @@ export default class DictionaryCard extends Component {
                             height: scaleHorizontal(300),
                         }}
                     />
-                    <Button text={'play'} />
+                    <Button
+                        text={'play'}
+                        onPress={() => console.log('should play sound')}
+                    />
                 </View>
             </DefaultContainer>
         );

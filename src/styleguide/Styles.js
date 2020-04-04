@@ -18,8 +18,10 @@ export const APP_STYLES = StyleSheet.create({
         borderRadius: scaleVertical(2),
     },
     TAG: {
-        width: scaleHorizontal(72),
+        // width: scaleHorizontal(72),
         height: scaleVertical(30),
+        // paddingVertical: scaleVertical(2),
+        paddingHorizontal: scaleHorizontal(10),
         borderRadius: scaleVertical(8),
         justifyContent: 'center',
         alignItems: 'center',

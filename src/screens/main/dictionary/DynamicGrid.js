@@ -16,10 +16,21 @@ import {DATA} from '../../../constants/data/Data';
 
 const onImagePress = (item, index, tagList, props) => {
     console.log(item, index, tagList);
-    let oldTagList = tagList;
+    // let oldTagList = tagList;
+    // oldTagList.push(item);
+    // props.navigation.navigate('DictionaryCard', {
+    //     tagList: tagList,
+    //     cardData: item,
+    // });
+
+    let oldTagList = [];
+    props.route.params.tagList.map(tag => {
+        console.log(tag);
+        oldTagList.push(tag);
+    });
     oldTagList.push(item);
     props.navigation.navigate('DictionaryCard', {
-        tagList: tagList,
+        tagList: oldTagList,
         cardData: item,
     });
 };
@@ -54,7 +65,7 @@ const DynamicGrid = props => {
             <TagRow tagList={tagList} />
             <View style={styles.divideContainer}>
                 <FlatList
-                    data={DATA}
+                    data={DATA.OUTWEAR}
                     renderItem={itemData =>
                         renderItem(itemData, tagList, props)
                     }
