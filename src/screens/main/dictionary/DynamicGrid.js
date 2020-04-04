@@ -1,10 +1,8 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Divide from '../../../components/common/Divide';
-import Tag from '../../../components/common/Tag';
 import {
     FlatList,
     Image,
-    SafeAreaView,
     StyleSheet,
     Text,
     TouchableOpacity,
@@ -13,42 +11,8 @@ import {
 import {DefaultContainer} from '../../../components/common/DefaultContainer';
 import {scaleHorizontal, scaleVertical} from '../../../lib/util';
 import {TagRow} from '../../../components/common/TagRow';
-import {IMAGES_DATA} from '../../../constants/data/ImagesData';
-import outwearDusterCoat from '../../../../assets/sets/outwear/01-Duster-coat.png';
-import outwearFrosterCoat from '../../../../assets/sets/outwear/02-Frock-Coat.png';
-import outwearFullTrenchCoat from '../../../../assets/sets/outwear/03-Full-Trench-Coat.png';
-import outwearMackintoshRaincoatCoat from '../../../../assets/sets/outwear/04-Mackintosh-Raincoat.png';
-import outwearUlsterette from '../../../../assets/sets/outwear/05-Ulsterette.png';
-import {APP_FONTS} from '../../../styleguide/Fonts';
 import {APP_STYLES} from '../../../styleguide/Styles';
-
-const data = [
-    {
-        tag: 'duster',
-        name: 'Duster coat',
-        image: outwearDusterCoat,
-    },
-    {
-        tag: 'froster',
-        name: 'Froster coat',
-        image: outwearFrosterCoat,
-    },
-    {
-        tag: 'full trench',
-        name: 'Full trench coat',
-        image: outwearFullTrenchCoat,
-    },
-    {
-        tag: 'mackintosh',
-        name: 'Mackintosh raincoat coat',
-        image: outwearMackintoshRaincoatCoat,
-    },
-    {
-        tag: 'ulsterette',
-        name: 'Ulsterette',
-        image: outwearUlsterette,
-    },
-];
+import {DATA} from '../../../constants/data/Data';
 
 const onImagePress = (item, index, tagList, props) => {
     console.log(item, index, tagList);
@@ -90,8 +54,10 @@ const DynamicGrid = props => {
             <TagRow tagList={tagList} />
             <View style={styles.divideContainer}>
                 <FlatList
-                    data={data}
-                    renderItem={itemData => renderItem(itemData, tagList, props)}
+                    data={DATA}
+                    renderItem={itemData =>
+                        renderItem(itemData, tagList, props)
+                    }
                     numColumns={2}
                     contentContainerStyle={styles.contentContainer}
                     showsVerticalScrollIndicator={false}
