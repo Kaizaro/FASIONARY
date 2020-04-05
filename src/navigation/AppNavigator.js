@@ -89,7 +89,7 @@ const MainStackSwitcher = props => (
         tabBarOptions={{
             showIcon: true,
             showLabel: false,
-            activeTintColor: APP_COLORS.BADGE_COLORS.SPACE_BLUE,
+            activeTintColor: APP_COLORS.PRIMARY_COLOR_ORANGE,
             inactiveTintColor: APP_COLORS.BLACK_COLOR,
         }}>
         <Tab.Screen
