@@ -38,7 +38,7 @@ export default class Button extends Component {
 const styles = StyleSheet.create({
     container: {
         width: '100%',
-        height: scaleVertical(60),
+        height: scaleVertical(50),
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',

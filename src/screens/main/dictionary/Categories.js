@@ -7,11 +7,12 @@ import {APP_FONTS} from '../../../styleguide/Fonts';
 import {APP_COLORS} from '../../../styleguide/Colors';
 import _ from 'lodash';
 
-import image from '../../../../assets/images/sample.jpeg';
+import image from '../../../../assets/images/sample.png';
 import DictionarySmallCard from '../../../components/dictionary/DictionarySmallCard';
 import Title from '../../../components/common/Title';
 import Description from '../../../components/common/Description';
 import {APP_STYLES} from '../../../styleguide/Styles';
+import StarButton from '../../../components/common/StarButton';
 
 export default class Categories extends Component {
     state = {
@@ -86,15 +87,13 @@ export default class Categories extends Component {
         return (
             <SafeAreaView style={{flex: 1}}>
                 <View style={APP_STYLES.CONTAINER}>
-                    <Title title={'Dictionary'} />
+                    <View style={styles.titleContainer}>
+                        <Title title={'Dictionary'} />
+                        <StarButton />
+                    </View>
                     <Description
                         text={description}
                         viewStyle={styles.divideContainer}
-                    />
-                    <Button
-                        icon
-                        text={'Favorites'}
-                        style={styles.divideContainer}
                     />
                     <View style={styles.flatlistContainer}>
                         <FlatList
@@ -121,7 +120,7 @@ const styles = StyleSheet.create({
     flatlistContainer: {
         marginTop: scaleVertical(20),
         width: '100%',
-        height: scaleVertical(330),
+        height: scaleVertical(400),
     },
     flatlistContentContainer: {
         width: '100%',
@@ -133,5 +132,11 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-between',
+    },
+    titleContainer: {
+        width: '100%',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
     },
 });

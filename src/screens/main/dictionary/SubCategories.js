@@ -7,7 +7,7 @@ import {APP_FONTS} from '../../../styleguide/Fonts';
 import {APP_COLORS} from '../../../styleguide/Colors';
 import _ from 'lodash';
 
-import image from '../../../../assets/images/sample.jpeg';
+import image from '../../../../assets/images/sample.png';
 import DictionarySmallCard from '../../../components/dictionary/DictionarySmallCard';
 import Title from '../../../components/common/Title';
 import Description from '../../../components/common/Description';

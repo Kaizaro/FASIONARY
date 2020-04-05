@@ -158,10 +158,10 @@ const theme = {
 const tabIconStyle = active => ({
     alignItems: 'center',
     justifyContent: 'center',
-    width: 40,
-    height: 40,
+    width: 30,
+    height: 30,
     tintColor: active
-        ? APP_COLORS.BADGE_COLORS.SPACE_BLUE
+        ? APP_COLORS.PRIMARY_COLOR_ORANGE
         : APP_COLORS.BLACK_COLOR,
 });
 
