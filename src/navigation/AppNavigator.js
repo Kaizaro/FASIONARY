@@ -11,6 +11,7 @@ import Profile from '../screens/main/profile/Profile';
 import DictionaryIcon from '../../assets/icons/tabBarIcons/DictionaryTabIcon.png';
 import CoursesIcon from '../../assets/icons/tabBarIcons/CoursesTabIcon.png';
 import LibraryIcon from '../../assets/icons/tabBarIcons/LibraryTabIcon.png';
+import ProfileIcon from '../../assets/icons/tabBarIcons/ProfileTabIcon.png';
 import Init from '../Init';
 import Categories from '../screens/main/dictionary/Categories';
 import SubCategories from '../screens/main/dictionary/SubCategories';
@@ -136,7 +137,7 @@ const MainStackSwitcher = props => (
             options={{
                 tabBarIcon: state => (
                     <Image
-                        source={CoursesIcon}
+                        source={ProfileIcon}
                         resizeMode={'contain'}
                         style={tabIconStyle(state.focused)}
                     />
