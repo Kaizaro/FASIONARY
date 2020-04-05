@@ -15,7 +15,7 @@ export default class StarButton extends Component {
                 style={styles.container}>
                 <Icon
                     name={'star'}
-                    color={APP_COLORS.BADGE_COLORS.YELLOW}
+                    color={APP_COLORS.PRIMARY_COLOR_ORANGE}
                     size={40}
                 />
             </TouchableOpacity>
