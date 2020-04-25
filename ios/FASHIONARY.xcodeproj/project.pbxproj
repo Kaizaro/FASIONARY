@@ -703,7 +703,7 @@
 				DEVELOPMENT_TEAM = 885PP34GXH;
 				INFOPLIST_FILE = FASHIONARY/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 0.0.1;
+				MARKETING_VERSION = 0.1.0;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -724,7 +724,7 @@
 				DEVELOPMENT_TEAM = 885PP34GXH;
 				INFOPLIST_FILE = FASHIONARY/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 0.0.1;
+				MARKETING_VERSION = 0.1.0;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
