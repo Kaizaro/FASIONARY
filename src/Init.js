@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {ActivityIndicator, Dimensions, StyleSheet, View} from 'react-native';
+import {APP_COLORS} from './styleguide/Colors';
 
 export let {width, height} = Dimensions.get('window');
 
@@ -37,7 +38,10 @@ export default class Init extends Component {
         console.log('\n\nheight', height);
         return (
             <View style={styles.container}>
-                <ActivityIndicator size={'large'} color={'blue'} />
+                <ActivityIndicator
+                    size={'large'}
+                    color={APP_COLORS.PRIMARY_COLOR_ORANGE}
+                />
             </View>
         );
     }
