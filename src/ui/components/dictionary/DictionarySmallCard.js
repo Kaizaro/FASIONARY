@@ -33,13 +33,13 @@ export default class DictionarySmallCard extends PureComponent {
 
 const styles = StyleSheet.create({
     container: {
-        width: scaleHorizontal(144),
-        height: scaleHorizontal(144),
+        width: scaleHorizontal(155),
+        height: scaleHorizontal(155),
         borderRadius: scaleVertical(20),
     },
     image: {
-        width: scaleHorizontal(144),
-        height: scaleHorizontal(144),
+        width: scaleHorizontal(155),
+        height: scaleHorizontal(155),
         borderRadius: scaleVertical(20),
         justifyContent: 'flex-end',
         overflow: 'hidden',

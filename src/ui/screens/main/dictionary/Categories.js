@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component, Fragment} from 'react';
 import {FlatList, SafeAreaView, StyleSheet, Text, View} from 'react-native';
 import {width, height} from '../../../../helpers/navigation/AppNavigator';
 import Button from '../../../components/common/Button';
@@ -15,6 +15,9 @@ import {APP_STYLES} from '../../../../helpers/styleguide/Styles';
 import StarButton from '../../../components/common/StarButton';
 import {CATEGORIES} from '../../../../constants/Categories';
 
+const description =
+    'Visual Dictionary helps you to define professional tools and termins by photo and images, and provides translations on other languages';
+
 export default class Categories extends Component {
     onPressCard = cardData => {
         console.log(cardData);
@@ -26,18 +29,26 @@ export default class Categories extends Component {
     renderItem = ({item, index}) => {
         console.log(item, index);
         return (
-            <View style={styles.rowContainer}>
-                {item.map((cardData, cardIndex) => {
-                    console.log(cardIndex, cardData);
-                    return (
-                        <DictionarySmallCard
-                            image={cardData.image}
-                            text={cardData.name}
-                            onPress={() => this.onPressCard(cardData)}
-                        />
-                    );
-                })}
-            </View>
+            <Fragment>
+                {index === 0 && (
+                    <Description
+                        text={description}
+                        viewStyle={{marginBottom: scaleVertical(20)}}
+                    />
+                )}
+                <View style={styles.rowContainer}>
+                    {item.map((cardData, cardIndex) => {
+                        console.log(cardIndex, cardData);
+                        return (
+                            <DictionarySmallCard
+                                image={cardData.image}
+                                text={cardData.name}
+                                onPress={() => this.onPressCard(cardData)}
+                            />
+                        );
+                    })}
+                </View>
+            </Fragment>
         );
     };
 
@@ -45,8 +56,6 @@ export default class Categories extends Component {
         console.log(width, height);
         const chunkedCategories = _.chunk(CATEGORIES, 2);
         console.log(chunkedCategories);
-        const description =
-            'Visual Dictionary helps you to define professional tools and termins by photo and images, and provides translations on other languages';
         return (
             <SafeAreaView style={{flex: 1}}>
                 <View style={APP_STYLES.CONTAINER}>
@@ -54,10 +63,6 @@ export default class Categories extends Component {
                         <Title title={'Dictionary'} />
                         <StarButton />
                     </View>
-                    <Description
-                        text={description}
-                        viewStyle={styles.divideContainer}
-                    />
                     <View style={styles.flatlistContainer}>
                         <FlatList
                             keyExtractor={item => item.name}
@@ -83,11 +88,11 @@ const styles = StyleSheet.create({
     flatlistContainer: {
         marginTop: scaleVertical(20),
         width: '100%',
-        height: scaleVertical(400),
+        height: '90%',
     },
     flatlistContentContainer: {
         width: '100%',
-        paddingVertical: scaleVertical(20),
+        paddingBottom: scaleVertical(20),
     },
     rowContainer: {
         marginBottom: scaleVertical(20),
