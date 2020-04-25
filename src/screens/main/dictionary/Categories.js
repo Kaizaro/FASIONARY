@@ -13,45 +13,9 @@ import Title from '../../../components/common/Title';
 import Description from '../../../components/common/Description';
 import {APP_STYLES} from '../../../styleguide/Styles';
 import StarButton from '../../../components/common/StarButton';
+import {CATEGORIES} from '../../../constants/Categories';
 
 export default class Categories extends Component {
-    state = {
-        categories: [
-            {
-                image: image,
-                name: 'Clothes',
-            },
-            {
-                image: image,
-                name: 'Accessories',
-            },
-            {
-                image: image,
-                name: 'Pattern',
-            },
-            {
-                image: image,
-                name: 'Sewing',
-            },
-            {
-                image: image,
-                name: 'Any',
-            },
-            {
-                image: image,
-                name: 'Any',
-            },
-            {
-                image: image,
-                name: 'Any',
-            },
-            {
-                image: image,
-                name: 'Any',
-            },
-        ],
-    };
-
     onPressCard = cardData => {
         console.log(cardData);
         this.props.navigation.navigate('SubCategories', {
@@ -79,8 +43,7 @@ export default class Categories extends Component {
 
     render() {
         console.log(width, height);
-        const {categories} = this.state;
-        const chunkedCategories = _.chunk(categories, 2);
+        const chunkedCategories = _.chunk(CATEGORIES, 2);
         console.log(chunkedCategories);
         const description =
             'Visual Dictionary helps you to define professional tools and termins by photo and images, and provides translations on other languages';
