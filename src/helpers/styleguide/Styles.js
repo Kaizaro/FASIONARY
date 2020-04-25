@@ -42,4 +42,9 @@ export const APP_STYLES = StyleSheet.create({
         fontSize: scaleHorizontal(24),
         color: APP_COLORS.BLACK_COLOR,
     },
+    COURSE_NAME_TEXT: {
+        fontFamily: APP_FONTS.TITLE,
+        fontSize: scaleHorizontal(24),
+        color: APP_COLORS.BACKGROUND_COLOR,
+    },
 });

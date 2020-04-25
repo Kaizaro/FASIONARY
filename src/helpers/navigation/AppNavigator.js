@@ -18,6 +18,8 @@ import SubCategories from '../../ui/screens/main/dictionary/SubCategories';
 import DynamicGrid from '../../ui/screens/main/dictionary/DynamicGrid';
 import DictionaryCard from '../../ui/screens/main/dictionary/DictionaryCard';
 import {Favourites} from '../../ui/screens/main/favourites/Favourites';
+import SubCourses from '../../ui/screens/main/courses/SubCourses';
+import CourseDetail from '../../ui/screens/main/courses/CourseDetail';
 
 export let navigatorRef = createRef();
 
@@ -136,6 +138,8 @@ const DictionaryStackSwitcher = () => (
 const CoursesStackSwitcher = () => (
     <CoursesStack.Navigator initialRouteName={'Courses'} headerMode={false}>
         <CoursesStack.Screen name={'Courses'} component={Courses} />
+        <CoursesStack.Screen name={'SubCourses'} component={SubCourses} />
+        <CoursesStack.Screen name={'CourseDetail'} component={CourseDetail} />
     </CoursesStack.Navigator>
 );
 

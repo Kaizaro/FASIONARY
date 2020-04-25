@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Divide from '../../../components/common/Divide';
 import {TagRow} from '../../../components/common/TagRow';
 import {
+    Alert,
     FlatList,
     Image,
     StyleSheet,
@@ -10,7 +11,7 @@ import {
     View,
 } from 'react-native';
 import {DefaultContainer} from '../../../components/common/DefaultContainer';
-import {scaleHorizontal} from '../../../../helpers/lib/util';
+import {scaleHorizontal, scaleVertical} from '../../../../helpers/lib/util';
 import Button from '../../../components/common/Button';
 import {Player} from '@react-native-community/audio-toolkit';
 import sound from '../../../../../assets/sounds/outwear/00 - 01 - I. Nihon-go no hatsuon- 1. Kana to Haku.mp3';
@@ -20,67 +21,46 @@ import FavouritesIcon from '../../../../../assets/icons/Favourites.png';
 import {APP_STYLES} from '../../../../helpers/styleguide/Styles';
 
 export default class CourseDetail extends Component {
-    onPlayIconPress = cardData => {
-        console.log('should play sound');
-        console.log(cardData);
-        new Player(
-            '../../../../assets/sounds/outwear/00 - 01 - I. Nihon-go no hatsuon- 1. Kana to Haku.mp3',
-        ).play();
-    };
-
-    onFavouritesIconPress = cardData => {
-        console.log(cardData);
+    onStartCourseButtonPress = course => {
+        console.log(course);
+        Alert.alert('Success!', 'Congratulations! Your course is active.');
     };
 
     render() {
-        const cardData = this.props.route.params.cardData;
-        const tagList = this.props.route.params.tagList;
-        console.log(cardData);
-        console.log(tagList);
+        const course = this.props.route.params.course;
         return (
             <DefaultContainer>
                 <Divide />
-                <TagRow tagList={tagList} />
                 <View style={styles.container}>
-                    <Image
-                        source={cardData.image}
-                        resizeMode={'contain'}
-                        style={{
-                            width: scaleHorizontal(300),
-                            height: scaleHorizontal(300),
-                        }}
-                    />
-                    <Text style={APP_STYLES.CARD_NAME_TEXT}>
-                        {cardData.name}
-                    </Text>
-                    <View style={styles.row}>
-                        <TouchableOpacity
-                            onPress={() =>
-                                this.onFavouritesIconPress(cardData)
-                            }>
-                            <Image
-                                source={FavouritesIcon}
-                                resizeMode={'contain'}
-                                style={{
-                                    width: scaleHorizontal(30),
-                                    height: scaleHorizontal(30),
-                                }}
-                            />
-                        </TouchableOpacity>
-                        <TouchableOpacity
-                            onPress={() => this.onPlayIconPress(cardData)}>
-                            <Icon
-                                name={'volume-up'}
-                                size={scaleHorizontal(25)}
-                                color={APP_COLORS.BLACK_COLOR}
-                            />
-                        </TouchableOpacity>
+                    <View style={styles.title}>
+                        <Text style={APP_STYLES.TITLE_TEXT}>{course.name}</Text>
                     </View>
-                    {/*<Button*/}
-                    {/*    text={'play'}*/}
-                    {/*    onPress={() => this.playSound(cardData)}*/}
-                    {/*/>*/}
+                    <Text style={APP_STYLES.MAIN_TEXT}>
+                        {course.description}
+                    </Text>
+                    <Text style={APP_STYLES.MAIN_TEXT}>
+                        {course.about}
+                    </Text>
+                    {course.conditions.map((item, index) => {
+                        return (
+                            <View>
+                                <Text style={APP_STYLES.CARD_NAME_TEXT}>{`${item.type}: ${item.details}`}</Text>
+                            </View>
+                        );
+                    })}
+                    <View>
+                        <View>
+                            <Text style={APP_STYLES.CARD_NAME_TEXT}>Professors</Text>
+                        </View>
+                        <View style={{marginTop: scaleVertical(10)}}>
+                            <Text style={APP_STYLES.MAIN_TEXT}>{`${course.professors}`}</Text>
+                        </View>
+                    </View>
                 </View>
+                <Button
+                    text={'Apply Now'}
+                    onPress={() => this.onStartCourseButtonPress(course)}
+                />
             </DefaultContainer>
         );
     }
@@ -98,5 +78,9 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-evenly',
         alignItems: 'center',
+    },
+    title: {
+        width: '100%',
+        marginTop: scaleVertical(10),
     },
 });

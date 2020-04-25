@@ -1,5 +1,12 @@
 import React, {Component, Fragment} from 'react';
-import {Alert, FlatList, SafeAreaView, StyleSheet, Text, View} from 'react-native';
+import {
+    Alert,
+    FlatList,
+    SafeAreaView,
+    StyleSheet,
+    Text,
+    View,
+} from 'react-native';
 import {scaleVertical} from '../../../../helpers/lib/util';
 import Title from '../../../components/common/Title';
 import Description from '../../../components/common/Description';
@@ -7,18 +14,21 @@ import {APP_STYLES} from '../../../../helpers/styleguide/Styles';
 import DictionarySmallCard from '../../../components/dictionary/DictionarySmallCard';
 import _ from 'lodash';
 import {CATEGORIES} from '../../../../constants/data/dictionary/Categories';
+import {COURSES} from '../../../../constants/data/courses/Courses';
+import {CourseCategory} from '../../../components/courses/CourseCategory';
+
+const description =
+    "We offer best and most relevant courses by top professionals of fashion industry for our students. All you want to learn it's at one place. Learn new. Expand your vision. Be unique.";
 
 export default class Courses extends Component {
-    onPressCard = cardData => {
-        console.log(cardData);
-        if (cardData.name === 'Clothes') {
-            this.props.navigation.navigate('SubCategories', {
-                tagList: [cardData],
-            });
+    onCoursePress = course => {
+        console.log(course);
+        if (course.name === 'Fashion Design') {
+            this.props.navigation.navigate('SubCourses', {course});
         } else {
             Alert.alert(
-                `${cardData.name} is unavailable`,
-                'Unfortunately, right now this category is not available.',
+                `${course.name} is unavailable`,
+                'Unfortunately, right now this course is not available.',
             );
         }
     };
@@ -34,36 +44,29 @@ export default class Courses extends Component {
                     />
                 )}
                 <View style={styles.rowContainer}>
-                    {item.map((cardData, cardIndex) => {
-                        console.log(cardIndex, cardData);
-                        return (
-                            <DictionarySmallCard
-                                image={cardData.image}
-                                text={cardData.name}
-                                onPress={() => this.onPressCard(cardData)}
-                            />
-                        );
-                    })}
+                    <CourseCategory
+                        color={item.color}
+                        course={item.name}
+                        onPress={() => this.onCoursePress(item)}
+                    />
                 </View>
             </Fragment>
         );
     };
 
     render() {
-        const chunkedCategories = _.chunk(CATEGORIES, 2);
-        console.log(chunkedCategories);
         return (
             <SafeAreaView style={{flex: 1}}>
                 <View style={APP_STYLES.CONTAINER}>
                     <Title title={'Courses'} />
-                    <Description
-                        text={'Courses not available right now'}
-                        viewStyle={styles.divideContainer}
-                    />
+                    {/*<Description*/}
+                    {/*    text={'Courses not available right now'}*/}
+                    {/*    viewStyle={styles.divideContainer}*/}
+                    {/*/>*/}
                     <View style={styles.flatlistContainer}>
                         <FlatList
-                            keyExtractor={item => item[0].id + item[1].name}
-                            data={chunkedCategories}
+                            keyExtractor={item => item.id + item.name}
+                            data={COURSES}
                             renderItem={this.renderItem}
                             contentContainerStyle={
                                 styles.flatlistContentContainer
@@ -81,5 +84,27 @@ export default class Courses extends Component {
 const styles = StyleSheet.create({
     divideContainer: {
         marginTop: scaleVertical(20),
+    },
+    flatlistContainer: {
+        marginTop: scaleVertical(10),
+        width: '100%',
+        height: '90%',
+    },
+    flatlistContentContainer: {
+        width: '100%',
+        paddingBottom: scaleVertical(20),
+    },
+    rowContainer: {
+        marginBottom: scaleVertical(20),
+        width: '100%',
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+    },
+    titleContainer: {
+        width: '100%',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
     },
 });

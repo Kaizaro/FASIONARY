@@ -9,9 +9,16 @@ export const COURSES = [
             'This course is perfectly designed for new students who just joined the fashion industry and is eager to start deep.',
         conditions: [
             {
-                duration: '6 weeks',
-                price: '$690',
-                educationType: 'Online',
+                type: 'duration',
+                details: '6 weeks',
+            },
+            {
+                type: 'cost',
+                details: '$690',
+            },
+            {
+                type: 'Type of education',
+                details: 'Online',
             },
         ],
         about:
@@ -27,9 +34,16 @@ export const COURSES = [
             'This course is perfectly designed for new students who just joined the fashion industry and is eager to start deep.',
         conditions: [
             {
-                duration: '12 weeks',
-                price: '$1250',
-                educationType: 'Class',
+                type: 'duration',
+                details: '12 weeks',
+            },
+            {
+                type: 'cost',
+                details: '$1250',
+            },
+            {
+                type: 'Type of education',
+                details: 'Class',
             },
         ],
         about:
@@ -45,9 +59,16 @@ export const COURSES = [
             'This course is perfectly designed for new students who just joined the fashion industry and is eager to start deep.',
         conditions: [
             {
-                duration: '6 weeks',
-                price: '$690',
-                educationType: 'Online',
+                type: 'duration',
+                details: '6 weeks',
+            },
+            {
+                type: 'cost',
+                details: '$690',
+            },
+            {
+                type: 'Type of education',
+                details: 'Online',
             },
         ],
         about:
