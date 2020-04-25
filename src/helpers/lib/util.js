@@ -1,4 +1,4 @@
-import {width, height} from '../../Init';
+import {width, height} from '../../ui/screens/Init';
 
 export const scaleHorizontal = inWidth => {
     const idealWidth = 375;

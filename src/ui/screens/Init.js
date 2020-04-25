@@ -6,9 +6,9 @@ import {
     StyleSheet,
     View,
 } from 'react-native';
-import {APP_COLORS} from './helpers/styleguide/Colors';
-import FashionaryLogo from '../assets/images/Logo.png';
-import {router} from './helpers/navigation/Router';
+import {APP_COLORS} from '../../helpers/styleguide/Colors';
+import FashionaryLogo from '../../../assets/images/Logo.png';
+import {router} from '../../helpers/navigation/Router';
 
 export let {width, height} = Dimensions.get('window');
 

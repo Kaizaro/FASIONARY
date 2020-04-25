@@ -12,7 +12,7 @@ import DictionaryIcon from '../../../assets/icons/tabBarIcons/DictionaryTabIcon.
 import CoursesIcon from '../../../assets/icons/tabBarIcons/CoursesTabIcon.png';
 import LibraryIcon from '../../../assets/icons/tabBarIcons/LibraryTabIcon.png';
 import ProfileIcon from '../../../assets/icons/tabBarIcons/ProfileTabIcon.png';
-import Init from '../../Init';
+import Init from '../../ui/screens/Init';
 import Categories from '../../ui/screens/main/dictionary/Categories';
 import SubCategories from '../../ui/screens/main/dictionary/SubCategories';
 import DynamicGrid from '../../ui/screens/main/dictionary/DynamicGrid';

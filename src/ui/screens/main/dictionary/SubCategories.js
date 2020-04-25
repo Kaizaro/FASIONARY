@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {FlatList, SafeAreaView, StyleSheet, Text, View} from 'react-native';
-import {width, height} from '../../../../Init';
+import {width, height} from '../../Init';
 import {scaleHorizontal, scaleVertical} from '../../../../helpers/lib/util';
 import _ from 'lodash';
 
