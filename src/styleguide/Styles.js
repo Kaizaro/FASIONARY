@@ -30,7 +30,7 @@ export const APP_STYLES = StyleSheet.create({
     TITLE_TEXT: {
         fontFamily: APP_FONTS.TITLE,
         fontSize: scaleHorizontal(36),
-        color: APP_COLORS.BLACK_COLOR,
+        color: APP_COLORS.PRIMARY_COLOR_ORANGE,
     },
     MAIN_TEXT: {
         fontFamily: APP_FONTS.TEXT_MAIN,

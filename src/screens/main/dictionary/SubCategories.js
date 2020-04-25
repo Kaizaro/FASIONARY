@@ -1,43 +1,16 @@
 import React, {Component} from 'react';
 import {FlatList, SafeAreaView, StyleSheet, Text, View} from 'react-native';
-import {width, height} from '../../../navigation/AppNavigator';
-import Button from '../../../components/common/Button';
+import {width, height} from '../../../Init';
 import {scaleHorizontal, scaleVertical} from '../../../lib/util';
-import {APP_FONTS} from '../../../styleguide/Fonts';
-import {APP_COLORS} from '../../../styleguide/Colors';
 import _ from 'lodash';
 
-import image from '../../../../assets/images/sample.png';
 import DictionarySmallCard from '../../../components/dictionary/DictionarySmallCard';
-import Title from '../../../components/common/Title';
-import Description from '../../../components/common/Description';
 import {APP_STYLES} from '../../../styleguide/Styles';
-import Tag from '../../../components/common/Tag';
 import Divide from '../../../components/common/Divide';
 import {TagRow} from '../../../components/common/TagRow';
+import {SUBCATEGORIES} from '../../../constants/SubCategories';
 
 export default class SubCategories extends Component {
-    state = {
-        subCategories: [
-            {
-                image: image,
-                name: 'Bottom',
-            },
-            {
-                image: image,
-                name: 'Skirt',
-            },
-            {
-                image: image,
-                name: 'Dress',
-            },
-            {
-                image: image,
-                name: 'Outwear',
-            },
-        ],
-    };
-
     onCardPress = cardData => {
         let oldTagList = [];
         this.props.route.params.tagList.map(tag => {
@@ -70,8 +43,7 @@ export default class SubCategories extends Component {
 
     render() {
         console.log(width, height);
-        const {subCategories} = this.state;
-        const chunkedSubCategories = _.chunk(subCategories, 2);
+        const chunkedSubCategories = _.chunk(SUBCATEGORIES, 2);
         console.log(chunkedSubCategories);
         console.log(this.props.navigation);
         console.log(this.props.route);

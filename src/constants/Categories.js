@@ -25,12 +25,4 @@ export const CATEGORIES = [
         image: image,
         name: 'Any',
     },
-    {
-        image: image,
-        name: 'Any',
-    },
-    {
-        image: image,
-        name: 'Any',
-    },
 ];
