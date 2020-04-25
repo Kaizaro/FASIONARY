@@ -1,6 +1,6 @@
 import React, {Component, Fragment} from 'react';
 import {FlatList, SafeAreaView, StyleSheet, Text, View} from 'react-native';
-import {width, height} from '../../../../helpers/navigation/AppNavigator';
+import {width, height} from '../../Init';
 import Button from '../../../components/common/Button';
 import {scaleHorizontal, scaleVertical} from '../../../../helpers/lib/util';
 import {APP_FONTS} from '../../../../helpers/styleguide/Fonts';

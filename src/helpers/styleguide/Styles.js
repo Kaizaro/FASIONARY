@@ -25,7 +25,7 @@ export const APP_STYLES = StyleSheet.create({
         borderRadius: scaleVertical(8),
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: APP_COLORS.BADGE_COLORS.PINK_PURPLE,
+        // backgroundColor: APP_COLORS.BADGE_COLORS.PINK_PURPLE,
     },
     TITLE_TEXT: {
         fontFamily: APP_FONTS.TITLE,

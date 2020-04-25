@@ -1,4 +1,5 @@
 import {width, height} from '../../ui/screens/Init';
+import {APP_COLORS} from '../styleguide/Colors';
 
 export const scaleHorizontal = inWidth => {
     const idealWidth = 375;
@@ -12,6 +13,21 @@ export const scaleVertical = inHeight => {
     const delimiter = idealHeight / inHeight;
     const outHeight = height / delimiter;
     return outHeight;
+};
+
+export const getBadgeColor = index => {
+    switch (index) {
+        case 0:
+            return APP_COLORS.BADGE_COLORS.PINK_PURPLE;
+        case 1:
+            return APP_COLORS.BADGE_COLORS.LIGHT_GREEN;
+        case 2:
+            return APP_COLORS.BADGE_COLORS.YELLOW;
+        case 3:
+            return APP_COLORS.BADGE_COLORS.SPACE_BLUE;
+        default:
+            return APP_COLORS.BADGE_COLORS.PINK_PURPLE;
+    }
 };
 
 export const getMonthName = month => {

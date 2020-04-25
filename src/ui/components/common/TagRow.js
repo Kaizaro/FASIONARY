@@ -1,11 +1,21 @@
 import React from 'react';
 import {FlatList, StyleSheet} from 'react-native';
-import {scaleHorizontal, scaleVertical} from '../../../helpers/lib/util';
+import {
+    getBadgeColor,
+    scaleHorizontal,
+    scaleVertical,
+} from '../../../helpers/lib/util';
 import Tag from './Tag';
 
 const renderItem = ({item, index}) => {
     console.log(item, index);
-    return <Tag tag={item.name} viewStyle={styles.tag} />;
+    return (
+        <Tag
+            tag={item.name}
+            viewStyle={styles.tag}
+            color={getBadgeColor(index)}
+        />
+    );
 };
 
 export const TagRow = props => {
