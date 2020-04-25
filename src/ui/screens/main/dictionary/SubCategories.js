@@ -8,7 +8,7 @@ import DictionarySmallCard from '../../../components/dictionary/DictionarySmallC
 import {APP_STYLES} from '../../../../helpers/styleguide/Styles';
 import Divide from '../../../components/common/Divide';
 import {TagRow} from '../../../components/common/TagRow';
-import {SUBCATEGORIES} from '../../../../constants/SubCategories';
+import {SUBCATEGORIES} from '../../../../constants/data/SubCategories';
 
 export default class SubCategories extends Component {
     onCardPress = cardData => {
@@ -56,7 +56,7 @@ export default class SubCategories extends Component {
                     {/*<Tag tag={tag} viewStyle={styles.divideContainer} />*/}
                     <View style={styles.flatlistContainer}>
                         <FlatList
-                            keyExtractor={item => item.name}
+                            keyExtractor={item => item[0].id + item[1].name}
                             data={chunkedSubCategories}
                             renderItem={this.renderItem}
                             contentContainerStyle={
