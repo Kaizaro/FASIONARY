@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {FlatList, SafeAreaView, StyleSheet, Text, View} from 'react-native';
+import {Alert, FlatList, SafeAreaView, StyleSheet, Text, View} from 'react-native';
 import {width, height} from '../../Init';
 import {scaleHorizontal, scaleVertical} from '../../../../helpers/lib/util';
 import _ from 'lodash';
@@ -18,9 +18,16 @@ export default class SubCategories extends Component {
             oldTagList.push(tag);
         });
         oldTagList.push(cardData);
-        this.props.navigation.navigate('DynamicGrid', {
-            tagList: oldTagList,
-        });
+        if (cardData.name === 'Outwear') {
+            this.props.navigation.navigate('DynamicGrid', {
+                tagList: oldTagList,
+            });
+        } else {
+            Alert.alert(
+                `${cardData.name} is unavailable`,
+                'Unfortunately, right now this category is not available.',
+            );
+        }
     };
 
     renderItem = ({item, index}) => {

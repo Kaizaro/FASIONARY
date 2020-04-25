@@ -1,5 +1,12 @@
 import React, {Component, Fragment} from 'react';
-import {FlatList, SafeAreaView, StyleSheet, Text, View} from 'react-native';
+import {
+    Alert,
+    FlatList,
+    SafeAreaView,
+    StyleSheet,
+    Text,
+    View,
+} from 'react-native';
 import {width, height} from '../../Init';
 import Button from '../../../components/common/Button';
 import {scaleHorizontal, scaleVertical} from '../../../../helpers/lib/util';
@@ -21,9 +28,16 @@ const description =
 export default class Categories extends Component {
     onPressCard = cardData => {
         console.log(cardData);
-        this.props.navigation.navigate('SubCategories', {
-            tagList: [cardData],
-        });
+        if (cardData.name === 'Clothes') {
+            this.props.navigation.navigate('SubCategories', {
+                tagList: [cardData],
+            });
+        } else {
+            Alert.alert(
+                `${cardData.name} is unavailable`,
+                'Unfortunately, right now this category is not available.',
+            );
+        }
     };
 
     renderItem = ({item, index}) => {
