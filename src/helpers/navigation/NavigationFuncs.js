@@ -7,6 +7,10 @@ export const routeNavigate = (route, screen, params) => {
     });
 };
 
+export const routeBack = () => {
+    navigatorRef.current?.goBack();
+};
+
 export const routeReset = (route, screen, params) => {
     console.log(navigatorRef);
     console.log(navigatorRef.current);
