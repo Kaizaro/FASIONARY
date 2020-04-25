@@ -1,4 +1,4 @@
-import image from '../../../assets/images/sample.png';
+import image from '../../../../assets/images/sample.png';
 
 export const SUBCATEGORIES = [
     {

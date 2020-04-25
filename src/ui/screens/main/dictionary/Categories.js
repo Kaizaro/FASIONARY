@@ -20,7 +20,7 @@ import Title from '../../../components/common/Title';
 import Description from '../../../components/common/Description';
 import {APP_STYLES} from '../../../../helpers/styleguide/Styles';
 import StarButton from '../../../components/common/StarButton';
-import {CATEGORIES} from '../../../../constants/data/Categories';
+import {CATEGORIES} from '../../../../constants/data/dictionary/Categories';
 
 const description =
     'Visual Dictionary helps you to define professional tools and termins by photo and images, and provides translations on other languages';

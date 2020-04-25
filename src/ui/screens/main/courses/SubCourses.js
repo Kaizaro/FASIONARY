@@ -10,7 +10,7 @@ import Divide from '../../../components/common/Divide';
 import {TagRow} from '../../../components/common/TagRow';
 import {SUBCATEGORIES} from '../../../../constants/data/dictionary/SubCategories';
 
-export default class SubCategories extends Component {
+export default class SubCourses extends Component {
     onCardPress = cardData => {
         let oldTagList = [];
         this.props.route.params.tagList.map(tag => {

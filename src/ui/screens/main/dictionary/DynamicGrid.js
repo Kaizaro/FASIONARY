@@ -12,13 +12,13 @@ import {DefaultContainer} from '../../../components/common/DefaultContainer';
 import {scaleHorizontal, scaleVertical} from '../../../../helpers/lib/util';
 import {TagRow} from '../../../components/common/TagRow';
 import {APP_STYLES} from '../../../../helpers/styleguide/Styles';
-import {DATA} from '../../../../constants/data/Data';
+import {DATA} from '../../../../constants/data/dictionary/Data';
 
 const onImagePress = (item, index, tagList, props) => {
     console.log(item, index, tagList);
     // let oldTagList = tagList;
     // oldTagList.push(item);
-    // props.navigation.navigate('DictionaryCard', {
+    // props.navigation.navigate('CourseDetail', {
     //     tagList: tagList,
     //     cardData: item,
     // });
