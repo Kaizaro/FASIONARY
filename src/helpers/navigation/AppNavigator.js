@@ -17,6 +17,7 @@ import Categories from '../../ui/screens/main/dictionary/Categories';
 import SubCategories from '../../ui/screens/main/dictionary/SubCategories';
 import DynamicGrid from '../../ui/screens/main/dictionary/DynamicGrid';
 import DictionaryCard from '../../ui/screens/main/dictionary/DictionaryCard';
+import {Favourites} from '../../ui/screens/main/favourites/Favourites';
 
 export let navigatorRef = createRef();
 
@@ -26,6 +27,7 @@ const Tab = createBottomTabNavigator();
 const DictionaryStack = createStackNavigator();
 const CoursesStack = createStackNavigator();
 const LibraryStack = createStackNavigator();
+const FavouritesStack = createStackNavigator();
 const ProfileStack = createStackNavigator();
 
 const AppStackSwitcher = () => (
@@ -48,41 +50,6 @@ const AuthStackSwitcher = props => (
     <AuthStack.Navigator>
         <AuthStack.Screen name={'Auth'} component={Profile} />
     </AuthStack.Navigator>
-);
-
-const DictionaryStackSwitcher = () => (
-    <DictionaryStack.Navigator
-        initialRouteName={'Categories'}
-        headerMode={false}>
-        <DictionaryStack.Screen name={'Categories'} component={Categories} />
-        <DictionaryStack.Screen
-            name={'SubCategories'}
-            component={SubCategories}
-        />
-        <DictionaryStack.Screen name={'DynamicGrid'} component={DynamicGrid} />
-        <DictionaryStack.Screen
-            name={'DictionaryCard'}
-            component={DictionaryCard}
-        />
-    </DictionaryStack.Navigator>
-);
-
-const CoursesStackSwitcher = () => (
-    <CoursesStack.Navigator initialRouteName={'Courses'} headerMode={false}>
-        <CoursesStack.Screen name={'Courses'} component={Courses} />
-    </CoursesStack.Navigator>
-);
-
-const LibraryStackSwitcher = () => (
-    <LibraryStack.Navigator initialRouteName={'Library'} headerMode={false}>
-        <LibraryStack.Screen name={'Library'} component={Library} />
-    </LibraryStack.Navigator>
-);
-
-const ProfileStackSwitcher = () => (
-    <ProfileStack.Navigator initialRouteName={'Profile'} headerMode={false}>
-        <ProfileStack.Screen name={'Profile'} component={Profile} />
-    </ProfileStack.Navigator>
 );
 
 const MainStackSwitcher = props => (
@@ -149,6 +116,47 @@ const MainStackSwitcher = props => (
     </Tab.Navigator>
 );
 
+const DictionaryStackSwitcher = () => (
+    <DictionaryStack.Navigator
+        initialRouteName={'Categories'}
+        headerMode={false}>
+        <DictionaryStack.Screen name={'Categories'} component={Categories} />
+        <DictionaryStack.Screen
+            name={'SubCategories'}
+            component={SubCategories}
+        />
+        <DictionaryStack.Screen name={'DynamicGrid'} component={DynamicGrid} />
+        <DictionaryStack.Screen
+            name={'DictionaryCard'}
+            component={DictionaryCard}
+        />
+    </DictionaryStack.Navigator>
+);
+
+const CoursesStackSwitcher = () => (
+    <CoursesStack.Navigator initialRouteName={'Courses'} headerMode={false}>
+        <CoursesStack.Screen name={'Courses'} component={Courses} />
+    </CoursesStack.Navigator>
+);
+
+const LibraryStackSwitcher = () => (
+    <LibraryStack.Navigator initialRouteName={'Library'} headerMode={false}>
+        <LibraryStack.Screen name={'Library'} component={Library} />
+    </LibraryStack.Navigator>
+);
+
+const FavouritesStackSwitcher = () => (
+    <FavouritesStack.Navigator initialRouteName={'Favourites'} headerMode={false}>
+        <FavouritesStack.Screen name={'Favourites'} component={Favourites} />
+    </FavouritesStack.Navigator>
+);
+
+const ProfileStackSwitcher = () => (
+    <ProfileStack.Navigator initialRouteName={'Profile'} headerMode={false}>
+        <ProfileStack.Screen name={'Profile'} component={Profile} />
+    </ProfileStack.Navigator>
+);
+
 const theme = {
     ...DefaultTheme,
     colors: {
@@ -160,8 +168,8 @@ const theme = {
 const tabIconStyle = active => ({
     alignItems: 'center',
     justifyContent: 'center',
-    width: 20,
-    height: 20,
+    width: 30,
+    height: 30,
     tintColor: active
         ? APP_COLORS.PRIMARY_COLOR_ORANGE
         : APP_COLORS.BLACK_COLOR,

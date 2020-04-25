@@ -28,7 +28,7 @@ export const CATEGORIES = [
     },
     {
         id: 6,
-        name: 'Stuff',
+        name: 'Painting',
         image: image,
     },
 ];

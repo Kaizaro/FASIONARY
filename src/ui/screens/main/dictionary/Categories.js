@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
         marginTop: scaleVertical(20),
     },
     flatlistContainer: {
-        marginTop: scaleVertical(20),
+        marginTop: scaleVertical(10),
         width: '100%',
         height: '90%',
     },

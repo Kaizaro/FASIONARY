@@ -18,15 +18,13 @@ export const scaleVertical = inHeight => {
 export const getBadgeColor = index => {
     switch (index) {
         case 0:
-            return APP_COLORS.BADGE_COLORS.PINK_PURPLE;
+            return APP_COLORS.BADGE_COLORS.BLUE;
         case 1:
-            return APP_COLORS.BADGE_COLORS.LIGHT_GREEN;
-        case 2:
             return APP_COLORS.BADGE_COLORS.YELLOW;
-        case 3:
-            return APP_COLORS.BADGE_COLORS.SPACE_BLUE;
+        case 2:
+            return APP_COLORS.BADGE_COLORS.PURPLE;
         default:
-            return APP_COLORS.BADGE_COLORS.PINK_PURPLE;
+            return APP_COLORS.BADGE_COLORS.BLUE;
     }
 };
 
