@@ -1,24 +1,27 @@
-import image from '../../../../assets/images/sample.png';
+import Bottom from '../../../../assets/images/Content/Trousers.jpg';
+import Skirt from '../../../../assets/images/Content/Skirt.jpg';
+import Dress from '../../../../assets/images/Content/Dress.jpg';
+import Outwear from '../../../../assets/images/Content/Ourwear.jpg';
 
 export const SUBCATEGORIES = [
     {
         id: 1,
         name: 'Bottom',
-        image: image,
+        image: Bottom,
     },
     {
         id: 2,
         name: 'Skirt',
-        image: image,
+        image: Skirt,
     },
     {
         id: 3,
         name: 'Dress',
-        image: image,
+        image: Dress,
     },
     {
         id: 4,
         name: 'Outwear',
-        image: image,
+        image: Outwear,
     },
 ];

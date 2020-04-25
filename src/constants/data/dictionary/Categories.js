@@ -1,34 +1,39 @@
-import image from '../../../../assets/images/sample.png';
+import Clothes from '../../../../assets/images/Content/Clothes.jpg';
+import Accessories from '../../../../assets/images/Content/Accessories.jpg';
+import Pattern from '../../../../assets/images/Content/Pattern.jpg';
+import Sewing from '../../../../assets/images/Content/Sewing.jpg';
+import Manufactory from '../../../../assets/images/Content/Manufactory.jpg';
+import Painting from '../../../../assets/images/Content/Painting.jpg';
 
 export const CATEGORIES = [
     {
         id: 1,
         name: 'Clothes',
-        image: image,
+        image: Clothes,
     },
     {
         id: 2,
         name: 'Accessories',
-        image: image,
+        image: Accessories,
     },
     {
         id: 3,
         name: 'Pattern',
-        image: image,
+        image: Pattern,
     },
     {
         id: 4,
         name: 'Sewing',
-        image: image,
+        image: Sewing,
     },
     {
         id: 5,
         name: 'Manufactory',
-        image: image,
+        image: Manufactory,
     },
     {
         id: 6,
         name: 'Painting',
-        image: image,
+        image: Painting,
     },
 ];

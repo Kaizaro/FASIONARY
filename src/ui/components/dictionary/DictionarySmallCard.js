@@ -54,6 +54,6 @@ const styles = StyleSheet.create({
     label: {
         fontFamily: APP_FONTS.TITLE,
         fontSize: scaleHorizontal(16),
-        color: APP_COLORS.BACKGROUND_COLOR,
+        color: APP_COLORS.BLACK_COLOR,
     },
 });
