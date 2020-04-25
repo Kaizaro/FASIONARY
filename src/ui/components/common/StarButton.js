@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
-import {StyleSheet, Text, TouchableOpacity} from 'react-native';
+import {Image, StyleSheet, Text, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/Entypo';
 import {APP_COLORS} from '../../../helpers/styleguide/Colors';
 import {scaleHorizontal, scaleVertical} from '../../../helpers/lib/util';
 import {APP_FONTS} from '../../../helpers/styleguide/Fonts';
+import FavouritesIcon from '../../../../assets/icons/Favourites.png';
 
 export default class StarButton extends Component {
     render() {
@@ -13,11 +14,20 @@ export default class StarButton extends Component {
                 activeOpacity={0.7}
                 onPress={onPress}
                 style={styles.container}>
-                <Icon
-                    name={'star'}
-                    color={APP_COLORS.PRIMARY_COLOR_ORANGE}
-                    size={40}
+                <Image
+                    source={FavouritesIcon}
+                    resizeMode={'contain'}
+                    style={{
+                        width: scaleHorizontal(30),
+                        height: scaleHorizontal(30),
+                        tintColor: APP_COLORS.PRIMARY_COLOR_ORANGE,
+                    }}
                 />
+                {/*<Icon*/}
+                {/*    name={'star'}*/}
+                {/*    color={APP_COLORS.PRIMARY_COLOR_ORANGE}*/}
+                {/*    size={40}*/}
+                {/*/>*/}
             </TouchableOpacity>
         );
     }
