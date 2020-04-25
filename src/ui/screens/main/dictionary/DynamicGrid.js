@@ -23,14 +23,14 @@ const onImagePress = (item, index, tagList, props) => {
     //     cardData: item,
     // });
 
-    let oldTagList = [];
-    props.route.params.tagList.map(tag => {
-        console.log(tag);
-        oldTagList.push(tag);
-    });
-    oldTagList.push(item);
+    // let oldTagList = [];
+    // props.route.params.tagList.map(tag => {
+    //     console.log(tag);
+    //     oldTagList.push(tag);
+    // });
+    // oldTagList.push(item);
     props.navigation.navigate('DictionaryCard', {
-        tagList: oldTagList,
+        tagList: tagList,
         cardData: item,
     });
 };
