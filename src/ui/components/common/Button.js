@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import {StyleSheet, Text, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/Entypo';
-import {APP_COLORS} from '../../styleguide/Colors';
-import {scaleHorizontal, scaleVertical} from '../../lib/util';
-import {APP_FONTS} from '../../styleguide/Fonts';
+import {APP_COLORS} from '../../../helpers/styleguide/Colors';
+import {scaleHorizontal, scaleVertical} from '../../../helpers/lib/util';
+import {APP_FONTS} from '../../../helpers/styleguide/Fonts';
 
 export default class Button extends Component {
     render() {

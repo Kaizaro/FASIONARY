@@ -1,22 +1,24 @@
-import React from 'react';
+import React, {createRef} from 'react';
 import {Image} from 'react-native';
 
 import {DefaultTheme, NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {APP_COLORS} from '../styleguide/Colors';
-import Courses from '../screens/main/courses/Courses';
-import Library from '../screens/main/library/Library';
-import Profile from '../screens/main/profile/Profile';
-import DictionaryIcon from '../../assets/icons/tabBarIcons/DictionaryTabIcon.png';
-import CoursesIcon from '../../assets/icons/tabBarIcons/CoursesTabIcon.png';
-import LibraryIcon from '../../assets/icons/tabBarIcons/LibraryTabIcon.png';
-import ProfileIcon from '../../assets/icons/tabBarIcons/ProfileTabIcon.png';
-import Init from '../Init';
-import Categories from '../screens/main/dictionary/Categories';
-import SubCategories from '../screens/main/dictionary/SubCategories';
-import DynamicGrid from '../screens/main/dictionary/DynamicGrid';
-import DictionaryCard from '../screens/main/dictionary/DictionaryCard';
+import Courses from '../../ui/screens/main/courses/Courses';
+import Library from '../../ui/screens/main/library/Library';
+import Profile from '../../ui/screens/main/profile/Profile';
+import DictionaryIcon from '../../../assets/icons/tabBarIcons/DictionaryTabIcon.png';
+import CoursesIcon from '../../../assets/icons/tabBarIcons/CoursesTabIcon.png';
+import LibraryIcon from '../../../assets/icons/tabBarIcons/LibraryTabIcon.png';
+import ProfileIcon from '../../../assets/icons/tabBarIcons/ProfileTabIcon.png';
+import Init from '../../Init';
+import Categories from '../../ui/screens/main/dictionary/Categories';
+import SubCategories from '../../ui/screens/main/dictionary/SubCategories';
+import DynamicGrid from '../../ui/screens/main/dictionary/DynamicGrid';
+import DictionaryCard from '../../ui/screens/main/dictionary/DictionaryCard';
+
+export let navigatorRef = createRef();
 
 const AppStack = createStackNavigator();
 const AuthStack = createStackNavigator();
@@ -166,7 +168,7 @@ const tabIconStyle = active => ({
 });
 
 const AppNavigator = () => (
-    <NavigationContainer theme={theme}>
+    <NavigationContainer theme={theme} ref={navigatorRef}>
         <AppStackSwitcher />
     </NavigationContainer>
 );

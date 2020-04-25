@@ -1,14 +1,14 @@
 import React, {Component} from 'react';
 import {FlatList, SafeAreaView, StyleSheet, Text, View} from 'react-native';
-import {width, height} from '../../../Init';
-import {scaleHorizontal, scaleVertical} from '../../../lib/util';
+import {width, height} from '../../../../Init';
+import {scaleHorizontal, scaleVertical} from '../../../../helpers/lib/util';
 import _ from 'lodash';
 
 import DictionarySmallCard from '../../../components/dictionary/DictionarySmallCard';
-import {APP_STYLES} from '../../../styleguide/Styles';
+import {APP_STYLES} from '../../../../helpers/styleguide/Styles';
 import Divide from '../../../components/common/Divide';
 import {TagRow} from '../../../components/common/TagRow';
-import {SUBCATEGORIES} from '../../../constants/SubCategories';
+import {SUBCATEGORIES} from '../../../../constants/SubCategories';
 
 export default class SubCategories extends Component {
     onCardPress = cardData => {

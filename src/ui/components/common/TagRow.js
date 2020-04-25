@@ -1,6 +1,6 @@
 import React from 'react';
 import {FlatList, StyleSheet} from 'react-native';
-import {scaleHorizontal, scaleVertical} from '../../lib/util';
+import {scaleHorizontal, scaleVertical} from '../../../helpers/lib/util';
 import Tag from './Tag';
 
 const renderItem = ({item, index}) => {

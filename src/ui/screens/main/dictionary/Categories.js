@@ -1,19 +1,19 @@
 import React, {Component} from 'react';
 import {FlatList, SafeAreaView, StyleSheet, Text, View} from 'react-native';
-import {width, height} from '../../../navigation/AppNavigator';
+import {width, height} from '../../../../helpers/navigation/AppNavigator';
 import Button from '../../../components/common/Button';
-import {scaleHorizontal, scaleVertical} from '../../../lib/util';
-import {APP_FONTS} from '../../../styleguide/Fonts';
-import {APP_COLORS} from '../../../styleguide/Colors';
+import {scaleHorizontal, scaleVertical} from '../../../../helpers/lib/util';
+import {APP_FONTS} from '../../../../helpers/styleguide/Fonts';
+import {APP_COLORS} from '../../../../helpers/styleguide/Colors';
 import _ from 'lodash';
 
-import image from '../../../../assets/images/sample.png';
+import image from '../../../../../assets/images/sample.png';
 import DictionarySmallCard from '../../../components/dictionary/DictionarySmallCard';
 import Title from '../../../components/common/Title';
 import Description from '../../../components/common/Description';
-import {APP_STYLES} from '../../../styleguide/Styles';
+import {APP_STYLES} from '../../../../helpers/styleguide/Styles';
 import StarButton from '../../../components/common/StarButton';
-import {CATEGORIES} from '../../../constants/Categories';
+import {CATEGORIES} from '../../../../constants/Categories';
 
 export default class Categories extends Component {
     onPressCard = cardData => {

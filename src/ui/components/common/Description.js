@@ -1,22 +1,18 @@
 import React, {PureComponent} from 'react';
 import {Text, View} from 'react-native';
-import {APP_STYLES} from '../../styleguide/Styles';
+import {APP_STYLES} from '../../../helpers/styleguide/Styles';
 
-export default class Tag extends PureComponent {
+export default class Description extends PureComponent {
     render() {
-        const {tag, viewStyle, textStyle} = this.props;
+        const {text, viewStyle, textStyle} = this.props;
         return (
-            <View
-                style={{
-                    ...APP_STYLES.TAG,
-                    ...viewStyle,
-                }}>
+            <View style={viewStyle}>
                 <Text
                     style={{
                         ...APP_STYLES.MAIN_TEXT,
                         ...textStyle,
                     }}>
-                    {tag}
+                    {text}
                 </Text>
             </View>
         );

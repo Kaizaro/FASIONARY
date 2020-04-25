@@ -6,8 +6,9 @@ import {
     StyleSheet,
     View,
 } from 'react-native';
-import {APP_COLORS} from './styleguide/Colors';
+import {APP_COLORS} from './helpers/styleguide/Colors';
 import FashionaryLogo from '../assets/images/Logo.png';
+import {router} from './helpers/navigation/Router';
 
 export let {width, height} = Dimensions.get('window');
 
@@ -15,14 +16,7 @@ export default class Init extends Component {
     componentDidMount() {
         this._handleOrientation();
         setTimeout(() => {
-            this.props.navigation.reset({
-                index: 0,
-                routes: [
-                    {
-                        name: 'MainStack',
-                    },
-                ],
-            });
+            router();
         }, 3000);
     }
 
@@ -41,8 +35,6 @@ export default class Init extends Component {
     }
 
     render() {
-        console.log('\n\nwidth', width);
-        console.log('\n\nheight', height);
         return (
             <View style={styles.container}>
                 <Image

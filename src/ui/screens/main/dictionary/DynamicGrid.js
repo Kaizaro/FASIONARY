@@ -9,10 +9,10 @@ import {
     View,
 } from 'react-native';
 import {DefaultContainer} from '../../../components/common/DefaultContainer';
-import {scaleHorizontal, scaleVertical} from '../../../lib/util';
+import {scaleHorizontal, scaleVertical} from '../../../../helpers/lib/util';
 import {TagRow} from '../../../components/common/TagRow';
-import {APP_STYLES} from '../../../styleguide/Styles';
-import {DATA} from '../../../constants/data/Data';
+import {APP_STYLES} from '../../../../helpers/styleguide/Styles';
+import {DATA} from '../../../../constants/data/Data';
 
 const onImagePress = (item, index, tagList, props) => {
     console.log(item, index, tagList);

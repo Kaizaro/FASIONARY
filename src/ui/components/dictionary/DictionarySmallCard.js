@@ -6,9 +6,9 @@ import {
     TouchableOpacity,
     View,
 } from 'react-native';
-import {scaleHorizontal, scaleVertical} from '../../lib/util';
-import {APP_FONTS} from '../../styleguide/Fonts';
-import {APP_COLORS} from '../../styleguide/Colors';
+import {scaleHorizontal, scaleVertical} from '../../../helpers/lib/util';
+import {APP_FONTS} from '../../../helpers/styleguide/Fonts';
+import {APP_COLORS} from '../../../helpers/styleguide/Colors';
 
 export default class DictionarySmallCard extends PureComponent {
     render() {

@@ -3,10 +3,10 @@ import Divide from '../../../components/common/Divide';
 import {TagRow} from '../../../components/common/TagRow';
 import {FlatList, Image, StyleSheet, View} from 'react-native';
 import {DefaultContainer} from '../../../components/common/DefaultContainer';
-import {scaleHorizontal} from '../../../lib/util';
+import {scaleHorizontal} from '../../../../helpers/lib/util';
 import Button from '../../../components/common/Button';
 import {Player} from '@react-native-community/audio-toolkit';
-import sound from '../../../../assets/sounds/outwear/00 - 01 - I. Nihon-go no hatsuon- 1. Kana to Haku.mp3'
+import sound from '../../../../../assets/sounds/outwear/00 - 01 - I. Nihon-go no hatsuon- 1. Kana to Haku.mp3'
 
 export default class DictionaryCard extends Component {
     playSound = cardData => {
