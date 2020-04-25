@@ -11,11 +11,10 @@ export const APP_STYLES = StyleSheet.create({
         justifyContent: 'flex-start',
     },
     DIVIDE: {
-        marginLeft: scaleHorizontal(12),
-        width: scaleHorizontal(50),
-        height: scaleVertical(6),
-        backgroundColor: APP_COLORS.BADGE_COLORS.SPACE_BLUE,
-        borderRadius: scaleVertical(2),
+        paddingHorizontal: scaleHorizontal(12),
+        width: scaleHorizontal(40),
+        // backgroundColor: APP_COLORS.BADGE_COLORS.SPACE_BLUE,
+        // borderRadius: scaleVertical(2),
     },
     TAG: {
         // width: scaleHorizontal(72),
