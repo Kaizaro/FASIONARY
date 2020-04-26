@@ -20,6 +20,8 @@ import DictionaryCard from '../../ui/screens/main/dictionary/DictionaryCard';
 import {Favourites} from '../../ui/screens/main/favourites/Favourites';
 import SubCourses from '../../ui/screens/main/courses/SubCourses';
 import CourseDetail from '../../ui/screens/main/courses/CourseDetail';
+import LibraryList from '../../ui/screens/main/library/LibraryList';
+import {LibraryView} from '../../ui/screens/main/library/LibraryView';
 
 export let navigatorRef = createRef();
 
@@ -146,6 +148,8 @@ const CoursesStackSwitcher = () => (
 const LibraryStackSwitcher = () => (
     <LibraryStack.Navigator initialRouteName={'Library'} headerMode={false}>
         <LibraryStack.Screen name={'Library'} component={Library} />
+        <LibraryStack.Screen name={'LibraryList'} component={LibraryList} />
+        <LibraryStack.Screen name={'LibraryView'} component={LibraryView} />
     </LibraryStack.Navigator>
 );
 
