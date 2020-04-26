@@ -19,8 +19,8 @@ export default class Divide extends PureComponent {
                     source={BackIcon}
                     resizeMode={'contain'}
                     style={{
-                        width: scaleHorizontal(20),
-                        height: scaleHorizontal(20),
+                        width: scaleHorizontal(25),
+                        height: scaleHorizontal(25),
                     }}
                 />
             </TouchableOpacity>
