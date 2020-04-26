@@ -1,5 +1,6 @@
 export const LIBRARY = [
     {
+        id: 1,
         name: 'The history of Chanel',
         authors: 'Albert Simons',
         year: 2013,
@@ -7,6 +8,7 @@ export const LIBRARY = [
         status: 'new',
     },
     {
+        id: 2,
         name: 'Art in details',
         authors: 'John Antony Kaizer, Anna Nova',
         year: 2014,
@@ -14,6 +16,7 @@ export const LIBRARY = [
         status: '78%',
     },
     {
+        id: 3,
         name: 'Art in details',
         authors: 'John Antony Kaizer, Anna Nova',
         year: 2014,

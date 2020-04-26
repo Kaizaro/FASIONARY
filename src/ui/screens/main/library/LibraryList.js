@@ -1,5 +1,12 @@
 import React, {Component} from 'react';
-import {Alert, FlatList, SafeAreaView, StyleSheet, Text, View} from 'react-native';
+import {
+    Alert,
+    FlatList,
+    SafeAreaView,
+    StyleSheet,
+    Text,
+    View,
+} from 'react-native';
 import {width, height} from '../../Init';
 import {scaleHorizontal, scaleVertical} from '../../../../helpers/lib/util';
 import _ from 'lodash';
@@ -9,6 +16,9 @@ import {APP_STYLES} from '../../../../helpers/styleguide/Styles';
 import Divide from '../../../components/common/Divide';
 import {TagRow} from '../../../components/common/TagRow';
 import {SUBCATEGORIES} from '../../../../constants/data/dictionary/SubCategories';
+import {LIBRARY} from '../../../../constants/data/library/Library';
+import {BookDescription} from '../../../components/library/BookDescription';
+import {APP_COLORS} from '../../../../helpers/styleguide/Colors';
 
 export default class LibraryList extends Component {
     // onCardPress = cardData => {
@@ -30,30 +40,31 @@ export default class LibraryList extends Component {
     //     }
     // };
 
+    onBookPress = book => {
+        if (book.name === 'The history of Chanel') {
+            this.props.navigation.navigate('LibraryView', {book});
+        } else {
+            Alert.alert(
+                `${book.name} is unavailable`,
+                'Unfortunately, right now this book is not available.',
+            );
+        }
+    };
+
     renderItem = ({item, index}) => {
         console.log(item, index);
         return (
             <View style={styles.rowContainer}>
-                {item.map((cardData, cardIndex) => {
-                    console.log(cardIndex, cardData);
-                    return (
-                        <DictionarySmallCard
-                            image={cardData.image}
-                            text={cardData.name}
-                            onPress={() => this.onCardPress(cardData)}
-                        />
-                    );
-                })}
+                <BookDescription
+                    book={item}
+                    color={APP_COLORS.BADGE_COLORS.BLUE}
+                    onPress={() => this.onBookPress(item)}
+                />
             </View>
         );
     };
 
     render() {
-        console.log(width, height);
-        const chunkedSubCategories = _.chunk(SUBCATEGORIES, 2);
-        console.log(chunkedSubCategories);
-        console.log(this.props.navigation);
-        console.log(this.props.route);
         const tagList = this.props.route.params.tagList;
         return (
             <SafeAreaView style={{flex: 1}}>
@@ -63,8 +74,8 @@ export default class LibraryList extends Component {
                     {/*<Tag tag={tag} viewStyle={styles.divideContainer} />*/}
                     <View style={styles.flatlistContainer}>
                         <FlatList
-                            keyExtractor={item => item[0].id + item[1].name}
-                            data={chunkedSubCategories}
+                            keyExtractor={item => item.id + item.name}
+                            data={LIBRARY}
                             renderItem={this.renderItem}
                             contentContainerStyle={
                                 styles.flatlistContentContainer

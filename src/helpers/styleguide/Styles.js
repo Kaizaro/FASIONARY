@@ -36,6 +36,11 @@ export const APP_STYLES = StyleSheet.create({
         fontSize: scaleHorizontal(16),
         color: APP_COLORS.BLACK_COLOR,
     },
+    BOLD_TEXT: {
+        fontFamily: APP_FONTS.TITLE,
+        fontSize: scaleHorizontal(16),
+        color: APP_COLORS.BLACK_COLOR,
+    },
     CARD_NAME_TEXT: {
         fontFamily: APP_FONTS.TITLE,
         fontSize: scaleHorizontal(24),
@@ -45,5 +50,10 @@ export const APP_STYLES = StyleSheet.create({
         fontFamily: APP_FONTS.TITLE,
         fontSize: scaleHorizontal(24),
         color: APP_COLORS.BACKGROUND_COLOR,
+    },
+    LIGHT_TEXT: {
+        fontFamily: APP_FONTS.TEXT_ALTERNATIVE,
+        fontSize: scaleHorizontal(14),
+        color: APP_COLORS.BLACK_COLOR,
     },
 });
