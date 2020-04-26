@@ -17,6 +17,7 @@ import Divide from '../../../components/common/Divide';
 import {SUBCATEGORIES} from '../../../../constants/data/dictionary/SubCategories';
 import {COURSES} from '../../../../constants/data/courses/Courses';
 import {CourseCategoryDescription} from '../../../components/courses/CouseCategoryDescription';
+import Title from '../../../components/common/Title';
 
 export default class SubCourses extends Component {
     onCoursePress = course => {
@@ -50,7 +51,7 @@ export default class SubCourses extends Component {
                 <View style={APP_STYLES.CONTAINER}>
                     <Divide />
                     <View style={styles.title}>
-                        <Text style={APP_STYLES.TITLE_TEXT}>{data.name}</Text>
+                        <Title title={data.name} />
                     </View>
                     <View style={styles.flatlistContainer}>
                         <FlatList
