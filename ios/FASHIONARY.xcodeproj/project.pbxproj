@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* FASHIONARYTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* FASHIONARYTests.m */; };
+		0782BC1D2455DAF20078FF8B /* 01 Duster coat.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 0782BC182455DAF10078FF8B /* 01 Duster coat.m4a */; };
+		0782BC1E2455DAF20078FF8B /* 02 Frock coat.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 0782BC192455DAF20078FF8B /* 02 Frock coat.m4a */; };
+		0782BC1F2455DAF20078FF8B /* 03 Full trench coat.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 0782BC1A2455DAF20078FF8B /* 03 Full trench coat.m4a */; };
+		0782BC202455DAF20078FF8B /* 04 Mackintosh raincoat.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 0782BC1B2455DAF20078FF8B /* 04 Mackintosh raincoat.m4a */; };
+		0782BC212455DAF20078FF8B /* 05 Ulsterette.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 0782BC1C2455DAF20078FF8B /* 05 Ulsterette.m4a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
@@ -49,6 +54,11 @@
 		00E356F21AD99517003FC87E /* FASHIONARYTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FASHIONARYTests.m; sourceTree = "<group>"; };
 		019AE139A98E58377B378632 /* Pods-FASHIONARY-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FASHIONARY-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-FASHIONARY-tvOSTests/Pods-FASHIONARY-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		05742DE37EEE4DA0477B9842 /* libPods-FASHIONARYTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FASHIONARYTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0782BC182455DAF10078FF8B /* 01 Duster coat.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "01 Duster coat.m4a"; path = "../assets/sounds/outwear/01 Duster coat.m4a"; sourceTree = "<group>"; };
+		0782BC192455DAF20078FF8B /* 02 Frock coat.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "02 Frock coat.m4a"; path = "../assets/sounds/outwear/02 Frock coat.m4a"; sourceTree = "<group>"; };
+		0782BC1A2455DAF20078FF8B /* 03 Full trench coat.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "03 Full trench coat.m4a"; path = "../assets/sounds/outwear/03 Full trench coat.m4a"; sourceTree = "<group>"; };
+		0782BC1B2455DAF20078FF8B /* 04 Mackintosh raincoat.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "04 Mackintosh raincoat.m4a"; path = "../assets/sounds/outwear/04 Mackintosh raincoat.m4a"; sourceTree = "<group>"; };
+		0782BC1C2455DAF20078FF8B /* 05 Ulsterette.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "05 Ulsterette.m4a"; path = "../assets/sounds/outwear/05 Ulsterette.m4a"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* FASHIONARY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FASHIONARY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = FASHIONARY/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = FASHIONARY/AppDelegate.m; sourceTree = "<group>"; };
@@ -131,6 +141,11 @@
 		13B07FAE1A68108700A75B9A /* FASHIONARY */ = {
 			isa = PBXGroup;
 			children = (
+				0782BC182455DAF10078FF8B /* 01 Duster coat.m4a */,
+				0782BC192455DAF20078FF8B /* 02 Frock coat.m4a */,
+				0782BC1A2455DAF20078FF8B /* 03 Full trench coat.m4a */,
+				0782BC1B2455DAF20078FF8B /* 04 Mackintosh raincoat.m4a */,
+				0782BC1C2455DAF20078FF8B /* 05 Ulsterette.m4a */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -357,9 +372,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0782BC1F2455DAF20078FF8B /* 03 Full trench coat.m4a in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				0782BC1E2455DAF20078FF8B /* 02 Frock coat.m4a in Resources */,
 				A4EEB542952B47A1829BCDB2 /* SofiaBold.ttf in Resources */,
+				0782BC202455DAF20078FF8B /* 04 Mackintosh raincoat.m4a in Resources */,
+				0782BC1D2455DAF20078FF8B /* 01 Duster coat.m4a in Resources */,
+				0782BC212455DAF20078FF8B /* 05 Ulsterette.m4a in Resources */,
 				F93D4D5424F6469FB7726B1A /* SofiaProExtraLight-Italic.ttf in Resources */,
 				D851E17EB3E14251A4336719 /* SofiaProExtraLight.ttf in Resources */,
 			);

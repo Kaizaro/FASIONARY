@@ -21,11 +21,7 @@ import {APP_STYLES} from '../../../../helpers/styleguide/Styles';
 
 export default class DictionaryCard extends Component {
     onPlayIconPress = cardData => {
-        console.log('should play sound');
-        console.log(cardData);
-        new Player(
-            '../../../../assets/sounds/outwear/00 - 01 - I. Nihon-go no hatsuon- 1. Kana to Haku.mp3',
-        ).play();
+        new Player(cardData.sound).play();
     };
 
     onFavouritesIconPress = cardData => {
