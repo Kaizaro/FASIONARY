@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {
+    Alert,
     Image,
     SafeAreaView,
     StyleSheet,
@@ -18,6 +19,10 @@ import {APP_COLORS} from '../../../../helpers/styleguide/Colors';
 export default class Profile extends Component {
     onSettingPress = setting => {
         console.log(setting);
+        Alert.alert(
+            'Setting is unavailable',
+            'Unfortunately, right now settings is not available.',
+        );
     };
 
     renderSetting = (setting, disabled) => (
